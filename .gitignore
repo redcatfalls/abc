@@ -1,0 +1,14 @@
+# Specifies files to intentionally ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+node_modules/
+www/build/
+www/index.html
+ionic.project
+.io-config.json
+platforms/
+plugins/
+typings/
+*.swp
+.DS_Store
+Thumbs.db
