@@ -1,0 +1,27 @@
+<ion-navbar *navbar>
+  <ion-buttons start>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-title>Cards Table</ion-title>
+
+  <ion-buttons end>
+    <button (click)="reset()">
+      <ion-icon name="refresh"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="getting-started">
+
+  <h3>Here will be cards!</h3>
+
+  <ul class="cards-list">
+    <li *ngFor="#card of deck.cards" class="cards-list-item animated zoomInUp">
+      {{card.title}}
+    </li>
+  </ul>
+
+</ion-content>

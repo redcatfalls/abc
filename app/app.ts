@@ -3,6 +3,10 @@
 import {App, IonicApp, Platform} from 'ionic-framework';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
+import {CardsTable} from './pages/cards-table/cards-table';
+import {Type} from "angular2/core";
+require('animate.css/source/_base.css');
+require('animate.css/source/zooming_entrances/zoomInUp.css');
 
 @App({
   templateUrl: 'build/app.html',
@@ -10,17 +14,17 @@ import {ListPage} from './pages/list/list';
 })
 class MyApp {
   // make HelloIonicPage the root (or first) page
-  rootPage: any = HelloIonicPage;
-  pages: Array<{title: string, component: any}>;
-
+  rootPage: Type = CardsTable;
+  //pages: Array<{title: string, component: any}>;
+  //
   constructor(private app: IonicApp, private platform: Platform) {
     this.initializeApp();
-
-    // set our app's pages
-    this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
-    ];
+  //
+  //  // set our app's pages
+  //  this.pages = [
+  //    { title: 'Hello Ionic', component: HelloIonicPage },
+  //    { title: 'My First List', component: ListPage }
+  //  ];
   }
 
   initializeApp() {
@@ -42,11 +46,11 @@ class MyApp {
     });
   }
 
-  openPage(page) {
-    // close the menu when clicking a link from the menu
-    this.app.getComponent('leftMenu').close();
-    // navigate to the new page if it is not the current page
-    let nav = this.app.getComponent('nav');
-    nav.setRoot(page.component);
-  }
+  //openPage(page) {
+  //  // close the menu when clicking a link from the menu
+  //  this.app.getComponent('leftMenu').close();
+  //  // navigate to the new page if it is not the current page
+  //  let nav = this.app.getComponent('nav');
+  //  nav.setRoot(page.component);
+  //}
 }

@@ -29,8 +29,16 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+      {
         test: /\.jade$/,
         loader: 'jade'
+      },
+      {
+        test: /\.html$/,
+        loader: 'html'
       },
       {
         test: /\.ts$/,
@@ -59,7 +67,8 @@ module.exports = {
   resolve: {
     root: ['app'],
     alias: {
-      'angular2': path.resolve('node_modules/angular2')
+      'angular2': path.resolve('node_modules/angular2'),
+      'appCore': path.resolve('app/core')
     },
     extensions: ["", ".js", ".ts"]
   },
