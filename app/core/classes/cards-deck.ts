@@ -12,10 +12,8 @@ export class CardsDeck {
 
   private generateDeck() {
     this.alphabet.forEach((letter) => {
-      this.cards.push(new Card(letter));
+      this.cards.push(new Card(letter.toUpperCase()));
     });
-
-    this.shuffle();
 
     return this;
   }

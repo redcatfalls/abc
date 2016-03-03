@@ -1,0 +1,19 @@
+<ion-content padding class="getting-started">
+
+  <ion-slides [options]="sliderOptions">
+
+    <ion-slide *ngFor="#card of deck.cards" class="slide-item">
+      <h2>{{card.title}}</h2>
+    </ion-slide>
+
+  </ion-slides>
+
+  <button small fab fab-top fab-left nav-pop class="slider-back-button">
+    <ion-icon name="arrow-round-back"></ion-icon>
+  </button>
+
+  <button fab fab-bottom fab-center class="slider-selected-card-button">
+    {{card.title}}
+  </button>
+
+</ion-content>

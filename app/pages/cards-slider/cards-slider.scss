@@ -1,0 +1,12 @@
+.slide-item {
+
+  & h2 {
+    font-size: 30px;
+    font-size: 50vh;
+  }
+}
+
+.slider-back-button,
+.slider-selected-card-button {
+  z-index: 1000;
+}

@@ -1,12 +1,11 @@
 /// <reference path="../typings/tsd.d.ts" />
 
 import {App, IonicApp, Platform} from 'ionic-framework';
-import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
-import {ListPage} from './pages/list/list';
 import {CardsTable} from './pages/cards-table/cards-table';
 import {Type} from "angular2/core";
 require('animate.css/source/_base.css');
 require('animate.css/source/zooming_entrances/zoomInUp.css');
+require('../plugins/cordova-plugin-screen-orientation/www/screenorientation');
 
 @App({
   templateUrl: 'build/app.html',
@@ -29,6 +28,7 @@ class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      window.screen['lockOrientation']('landscape');
       // The platform is now ready. Note: if this callback fails to fire, follow
       // the Troubleshooting guide for a number of possible solutions:
       //
