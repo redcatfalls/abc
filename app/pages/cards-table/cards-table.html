@@ -2,7 +2,7 @@
   <ion-title>Cards Table</ion-title>
 
   <ion-buttons end>
-    <button (click)="reset()">
+    <button (click)="resetTable()">
       <ion-icon name="refresh"></ion-icon>
     </button>
   </ion-buttons>
@@ -11,7 +11,7 @@
 <ion-content padding class="getting-started">
 
   <ul class="cards-list">
-    <li *ngFor="#card of deck.cards" (click)="selectCard(card)" class="cards-list-item animated zoomInUp">
+    <li *ngFor="#card of deck.cards" (click)="selectCard(card)" [hidden]="card.hidden" class="cards-list-item animated zoomInUp">
       {{card.title}}
     </li>
   </ul>

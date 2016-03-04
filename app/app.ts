@@ -3,12 +3,15 @@
 import {App, IonicApp, Platform} from 'ionic-framework';
 import {CardsTable} from './pages/cards-table/cards-table';
 import {Type} from "angular2/core";
+import {CardDeckService} from "./core/services/card-deck-service";
 require('animate.css/source/_base.css');
 require('animate.css/source/zooming_entrances/zoomInUp.css');
+require('animate.css/source/flippers/flip.css');
 require('../plugins/cordova-plugin-screen-orientation/www/screenorientation');
 
 @App({
   templateUrl: 'build/app.html',
+  providers: [CardDeckService],
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class MyApp {

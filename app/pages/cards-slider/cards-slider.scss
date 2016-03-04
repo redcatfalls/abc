@@ -1,8 +1,17 @@
 .slide-item {
+  color: #212121;
 
   & h2 {
-    font-size: 30px;
+    font-size: 30px; // fallback
     font-size: 50vh;
+  }
+
+  &.guessed {
+    background: #00E676;
+  }
+
+  &.mistake {
+    background: #FF5722;
   }
 }
 

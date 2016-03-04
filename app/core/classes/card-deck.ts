@@ -1,7 +1,7 @@
 import {Card} from "./card";
 import {shuffle as shuffleArray} from '../../core/utils/index';
 
-export class CardsDeck {
+export class CardDeck {
   public cards: Card[] = [];
   private alphabet: string[];
 

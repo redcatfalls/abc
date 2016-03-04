@@ -2,7 +2,8 @@
 
   <ion-slides [options]="sliderOptions">
 
-    <ion-slide *ngFor="#card of deck.cards" class="slide-item">
+    <ion-slide *ngFor="#card of deck.cards" class="slide-item" (click)="guessCard(card)"
+               [ngClass]="{guessed: card.guessed, mistake: card.mistakenly}">
       <h2>{{card.title}}</h2>
     </ion-slide>
 
