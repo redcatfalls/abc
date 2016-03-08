@@ -9,5 +9,8 @@
 
 @import "../pages/hello-ionic/hello-ionic";
 @import "../pages/cards-table/cards-table";
-@import "../pages/cards-slider/cards-slider";
 @import "../pages/item-details/item-details";
+
+.on-top {
+  z-index: 999;
+}

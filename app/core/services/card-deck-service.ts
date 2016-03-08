@@ -21,7 +21,7 @@ export class CardDeckService {
   }
   
   isFinished() {
-    return this.guessedDeck.cards.filter((card: Card) => !card.guessed).length <= 25;
+    return this.guessedDeck.cards.filter((card: Card) => card.guessed).length >= this.guessedDeck.cards.length;
   }
 
   reset() {

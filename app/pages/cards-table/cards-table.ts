@@ -1,8 +1,8 @@
 import {Page, NavController, Alert} from "ionic-framework";
 import {CardDeck} from "../../core/classes/card-deck";
 import {Card} from "../../core/classes/card";
-import {CardsSlider} from '../cards-slider/cards-slider';
 import {CardDeckService} from "../../core/services/card-deck-service";
+import {ComparisonTable} from "../comparison-table/comparison-table";
 
 @Page({
   template: require('./cards-table.html')
@@ -26,6 +26,24 @@ export class CardsTable {
     this.goToSliderPage();
   }
 
+  newGame() {
+    let alert = Alert.create({
+      title: 'New Game',
+      subTitle: 'You are going to start a new game, do you want to continue?',
+      buttons: [{
+        text: 'Yes',
+        handler: () => {
+          this.resetTable();
+        }
+      }, {
+        text: 'No',
+        role: 'cancel'
+      }]
+    });
+
+    this.nav.present(alert);
+  }
+
   resetTable() {
     this.cardDeckService.reset();
     this.deck = this.cardDeckService.initialDeck;
@@ -38,23 +56,25 @@ export class CardsTable {
 
   onPageDidEnter() {
     if (this.cardDeckService.isFinished()) {
-      // let alert = Alert.create({
-      //   title: 'Congratulations!',
-      //   subTitle: 'You successfully have finished a game!',
-      //   buttons: [{
-      //     text: 'Start new game',
-      //     handler: () => {
-      //       this.resetTable();
-      //     }
-      //   }]
-      // });
-      //
-      // this.nav.present(alert);
+      let alert = Alert.create({
+        title: 'Congratulations!',
+        subTitle: 'You successfully have finished a game!',
+        buttons: [{
+          text: 'Start a new game',
+          handler: () => {
+            this.resetTable();
+          }
+        }]
+      });
+
+      setTimeout(() => {
+        this.nav.present(alert);
+      }, 100);
     }
   }
 
   private goToSliderPage() {
-    this.nav.push(CardsSlider, {
+    this.nav.push(ComparisonTable, {
       card: this.selectedCard
     });
   }

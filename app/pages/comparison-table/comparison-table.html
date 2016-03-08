@@ -1,0 +1,17 @@
+<ion-content padding class="getting-started">
+
+  <ul class="cards-list">
+    <li *ngFor="#card of deck.cards" (click)="guessCard(card)" [ngClass]="{guessed: card.guessed, mistaken: card.mistakenly}" class="cards-list-item" gray>
+      {{card.title}}
+    </li>
+  </ul>
+
+</ion-content>
+
+<button light small fab fab-bottom fab-left nav-pop class="on-top">
+  <ion-icon name="arrow-round-back"></ion-icon>
+</button>
+
+<button large fab fab-bottom fab-right class="on-top">
+  {{card.title}}
+</button>

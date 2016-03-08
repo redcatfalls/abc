@@ -1,13 +1,18 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import {App, IonicApp, Platform} from 'ionic-framework';
+import {App, IonicApp, Platform, Alert} from 'ionic-framework';
 import {CardsTable} from './pages/cards-table/cards-table';
-import {Type} from "angular2/core";
 import {CardDeckService} from "./core/services/card-deck-service";
 require('animate.css/source/_base.css');
 require('animate.css/source/zooming_entrances/zoomInUp.css');
 require('animate.css/source/flippers/flip.css');
 require('../plugins/cordova-plugin-screen-orientation/www/screenorientation');
+
+declare var navigator: {
+  app: {
+    exitApp()
+  }
+};
 
 @App({
   templateUrl: 'build/app.html',
@@ -16,22 +21,43 @@ require('../plugins/cordova-plugin-screen-orientation/www/screenorientation');
 })
 class MyApp {
   // make HelloIonicPage the root (or first) page
-  rootPage: Type = CardsTable;
+  rootPage = CardsTable;
   //pages: Array<{title: string, component: any}>;
   //
   constructor(private app: IonicApp, private platform: Platform) {
     this.initializeApp();
-  //
-  //  // set our app's pages
-  //  this.pages = [
-  //    { title: 'Hello Ionic', component: HelloIonicPage },
-  //    { title: 'My First List', component: ListPage }
-  //  ];
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
       window.screen['lockOrientation']('landscape');
+
+      /**
+       * Handle Android back button until it implements natively https://github.com/driftyco/ionic/issues/5071
+       */
+      document.addEventListener('backbutton', () => {
+        let nav = this.app.getComponent('nav');
+
+        if (!nav.canGoBack()) {
+          let alert = Alert.create({
+            title: 'Exit app',
+            subTitle: 'Are you sure want to exit?',
+            buttons: [{
+              text: 'Yes',
+              handler: () => {
+                navigator.app.exitApp();
+              }
+            }, {
+              text: 'No',
+              role: 'cancel'
+            }]
+          });
+
+          return nav.present(alert);
+        }
+
+        return nav.pop();
+      }, false);
       // The platform is now ready. Note: if this callback fails to fire, follow
       // the Troubleshooting guide for a number of possible solutions:
       //

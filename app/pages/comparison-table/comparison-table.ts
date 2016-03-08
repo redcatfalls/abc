@@ -1,14 +1,12 @@
-import {Page, NavParams, NavController} from "ionic-framework/index";
+import {Page, NavController, NavParams} from "ionic-framework/index";
 import {Card} from "../../core/classes/card";
-import {CardDeck} from "../../core/classes/card-deck";
 import {CardDeckService} from "../../core/services/card-deck-service";
-import {NgClass} from "angular2/common";
+import {CardDeck} from "../../core/classes/card-deck";
 
 @Page({
-  template: require('./cards-slider.html'),
-  directives: [NgClass]
+  template: require('./comparison-table.html')
 })
-export class CardsSlider {
+export class ComparisonTable {
   deck: CardDeck;
   card: Card;
   nav: NavController;
@@ -17,6 +15,7 @@ export class CardsSlider {
   constructor(params: NavParams, cardDeckService: CardDeckService, nav: NavController) {
     this.card = params.get('card');
     this.nav = nav;
+    this.nav.swipeBackEnabled = true;
     this.deck = cardDeckService.guessedDeck;
     this.sliderOptions = {
       slidesPerView: 3,
@@ -24,7 +23,7 @@ export class CardsSlider {
       spaceBetween: 50
     };
   }
-  
+
   guessCard(card: Card) {
     if (card.guessed) {
       return false;
@@ -33,7 +32,7 @@ export class CardsSlider {
     if (this.card.isEqual(card)) {
       card.guessed = true;
       this.card.hidden = true;
-      
+
       setTimeout(() => {
         this.nav.pop();
       }, 100);
