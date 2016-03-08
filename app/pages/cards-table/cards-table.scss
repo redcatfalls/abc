@@ -10,6 +10,7 @@ $red-color: #FF5722;
   padding: 0;
 
   & > .cards-list-item {
+    font-family: ugo-line, Arial, sans-serif;
     display: inline-flex;
     width: 100px;
     height: 100px;
@@ -19,22 +20,49 @@ $red-color: #FF5722;
     margin: 5px;
     border-radius: 10px;
 
-    &[green] {
-      background: $green-color;
-      color: #fff;
-    }
-
-    &[gray] {
+    &.not-guessed {
       background: darkgray;
-      color: #fff;
-    }
-
-    &.guessed {
-      background: $green-color;
+      color: #fff !important;
     }
 
     &.mistaken {
-      background: $red-color;
+      background: #E2302E;
+      color: white;
+    }
+
+    &.c-red {
+      color: #E2302E;
+    }
+
+    &.c-blue {
+      color: #3F92D6;
+    }
+
+    &.c-lgreen {
+      color: #3F92D6;
+    }
+
+    &.c-dgreen {
+      color:#56BCC0;
+    }
+
+    &.c-viol {
+      color: #8556A7;
+    }
+
+    &.c-green {
+      color: #8EC840;
+    }
+
+    &.c-orange {
+      color: #EA702F;
     }
   }
+}
+
+.new-game-fab,
+.back-fab,
+.letter-fab {
+  width: 46px;
+  height: 46px;
 }

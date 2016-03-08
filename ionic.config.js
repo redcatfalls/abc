@@ -15,7 +15,10 @@ module.exports = {
       ]
     },
     fonts: {
-      src: ['node_modules/ionic-framework/fonts/**/*.+(ttf|woff|woff2)'],
+      src: [
+        'node_modules/ionic-framework/fonts/**/*.+(ttf|woff|woff2)',
+        'app/theme/fonts/**/*.+(ttf|woff|woff2)'
+      ],
       dest: "www/build/fonts"
     },
     watch: {

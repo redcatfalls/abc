@@ -1,19 +1,13 @@
-<ion-toolbar>
-  <ion-title>Cards Table</ion-title>
-
-  <ion-buttons end>
-    <button (click)="newGame()">
-      <ion-icon name="refresh"></ion-icon>
-    </button>
-  </ion-buttons>
-</ion-toolbar>
-
 <ion-content padding class="getting-started">
 
   <ul class="cards-list">
-    <li *ngFor="#card of deck.cards" (click)="selectCard(card)" [hidden]="card.hidden" class="cards-list-item animated zoomInUp" green>
+    <li *ngFor="#card of deck.cards" (click)="selectCard(card)" [hidden]="card.hidden" class="cards-list-item animated zoomInUp {{card.color}}">
       {{card.title}}
     </li>
   </ul>
 
 </ion-content>
+
+<button (click)="newGame()" small fab fab-top fab-right class="on-top new-game-fab">
+  <ion-icon name="refresh"></ion-icon>
+</button>

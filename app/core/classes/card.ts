@@ -4,7 +4,7 @@ export class Card {
   mistakenly: boolean = false;
   hidden: boolean = false;
   
-  constructor(public title: string) {}
+  constructor(public title: string, public color: string) {}
 
   isEqual(card: Card) {
     return this.title === card.title;
