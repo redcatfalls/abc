@@ -12,7 +12,9 @@ export class AbcCardDeck {
 
   private generateDeck() {
     this.alphabet.forEach((letter) => {
-      this.cards.push(new AbcCard(letter, getRandomVal(this.colors)));
+      this.cards.push(new AbcCard(letter, {
+        color: getRandomVal(this.colors)
+      }));
     });
 
     return this;

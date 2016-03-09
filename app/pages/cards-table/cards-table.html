@@ -1,7 +1,7 @@
 <ion-content padding class="getting-started">
 
   <ul class="cards-list">
-    <li *ngFor="#card of deck.cards" (click)="selectCard(card)" [hidden]="card.hidden" class="cards-list-item animated zoomInUp {{card.color}}">
+    <li *ngFor="#card of deck.cards" (click)="selectCard(card)" [hidden]="card.hidden" class="cards-list-item animated zoomInUp {{card.props.color}}">
       {{card.value}}
     </li>
   </ul>

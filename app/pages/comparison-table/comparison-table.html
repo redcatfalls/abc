@@ -3,7 +3,7 @@
   <ul class="cards-list">
     <li *ngFor="#card of deck.cards" (click)="guessCard(card)"
         [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
-        class="cards-list-item {{card.color}}">
+        class="cards-list-item {{card.props.color}}">
       {{card.value}}
     </li>
   </ul>
