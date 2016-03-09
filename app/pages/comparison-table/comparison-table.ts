@@ -1,14 +1,14 @@
 import {Page, NavController, NavParams} from "ionic-framework/index";
-import {Card} from "../../core/classes/card";
 import {CardDeckService} from "../../core/services/card-deck-service";
-import {CardDeck} from "../../core/classes/card-deck";
+import {AbcCardDeck} from "../../core/classes/abc-card-deck";
+import {AbcCard} from "../../core/classes/abc-card";
 
 @Page({
   template: require('./comparison-table.html')
 })
 export class ComparisonTable {
-  deck: CardDeck;
-  card: Card;
+  deck: AbcCardDeck;
+  card: AbcCard;
   nav: NavController;
   sliderOptions: any;
 
@@ -24,7 +24,7 @@ export class ComparisonTable {
     };
   }
 
-  guessCard(card: Card) {
+  guessCard(card: AbcCard) {
     if (card.guessed) {
       return false;
     }

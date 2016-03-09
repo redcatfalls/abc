@@ -2,7 +2,7 @@
 
   <ul class="cards-list">
     <li *ngFor="#card of deck.cards" (click)="selectCard(card)" [hidden]="card.hidden" class="cards-list-item animated zoomInUp {{card.color}}">
-      {{card.title}}
+      {{card.value}}
     </li>
   </ul>
 

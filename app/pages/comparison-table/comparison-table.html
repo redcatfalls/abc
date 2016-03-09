@@ -4,7 +4,7 @@
     <li *ngFor="#card of deck.cards" (click)="guessCard(card)"
         [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
         class="cards-list-item {{card.color}}">
-      {{card.title}}
+      {{card.value}}
     </li>
   </ul>
 
@@ -15,5 +15,5 @@
 </button>
 
 <button large fab fab-bottom fab-right class="on-top letter-fab">
-  {{card.title}}
+  {{card.value}}
 </button>

@@ -16,3 +16,7 @@ export function shuffle(arr: any[]): any[] {
 
     return arr;
 }
+
+export function getRandomVal(arr: Array<any>): any {
+    return arr[Math.floor(Math.random() * arr.length)];
+}

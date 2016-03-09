@@ -1,15 +1,16 @@
 import {Page, NavController, Alert} from "ionic-framework";
-import {CardDeck} from "../../core/classes/card-deck";
-import {Card} from "../../core/classes/card";
 import {CardDeckService} from "../../core/services/card-deck-service";
 import {ComparisonTable} from "../comparison-table/comparison-table";
+import {AbcCardDeck} from "../../core/classes/abc-card-deck";
+import {AbcCard} from "../../core/classes/abc-card";
+import {CardGuessable} from "../../core/classes/card-guessable";
 
 @Page({
   template: require('./cards-table.html')
 })
 export class CardsTable {
-  deck: CardDeck;
-  selectedCard: Card;
+  deck: AbcCardDeck;
+  selectedCard: AbcCard;
   cardDeckService: CardDeckService;
 
   private nav: NavController;
@@ -20,7 +21,7 @@ export class CardsTable {
     this.deck = cardDeckService.initialDeck;
   }
 
-  selectCard(card: Card) {
+  selectCard(card: AbcCard) {
     this.resetSelected();
     this.makeCardSelected(card);
     this.goToSliderPage();
@@ -79,13 +80,13 @@ export class CardsTable {
     });
   }
 
-  private makeCardSelected(card: Card) {
+  private makeCardSelected(card: AbcCard) {
     card.selected = true;
     this.selectedCard = card;
   }
 
   private resetSelected() {
-    if (this.selectedCard instanceof Card) {
+    if (this.selectedCard instanceof CardGuessable) {
       this.selectedCard.selected = false;
     }
   }
