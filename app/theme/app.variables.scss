@@ -1,3 +1,5 @@
+$abc-background: #87cefa;
+
 // http://ionicframework.com/docs/v2/theming/
 
 
@@ -10,6 +12,8 @@
 // in the app.core.scss file and not this file. Sass variables specific
 // to the mode belong in either the app.ios.scss or app.md.scss files.
 
+$background-ios-color: $abc-background;
+$background-md-color: $abc-background;
 
 // App Shared Color Variables
 // --------------------------------------------------

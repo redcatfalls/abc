@@ -1,9 +1,9 @@
 <ion-content padding class="getting-started">
 
-  <ul class="cards-list">
+  <ul class="abc">
     <li *ngFor="#card of deck.cards" (click)="guessCard(card)"
         [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
-        class="cards-list-item {{card.props.color}}">
+        class="abc-letter {{card.props.color}}">
       {{card.value}}
     </li>
   </ul>
