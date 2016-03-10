@@ -1,3 +1,14 @@
+.cat-container,
+.cat-container * * {
+  box-sizing: content-box !important;
+}
+
+.cat-container {
+  padding: 10px;
+  width: 550px;
+  margin: 0 auto;
+}
+
 #tail {
   position: absolute;
   margin-left: 40px;
@@ -38,7 +49,6 @@
   background-color: #E9CBA7;
   border-radius: 22px;
   display: inline-block;
-  overflow: hidden;
   z-index: 1;
 }
 
