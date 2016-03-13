@@ -1,11 +1,12 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-import {App, IonicApp, Platform, Alert} from 'ionic-framework';
+import {App, IonicApp, Platform, Alert} from 'ionic-angular';
 import {CardsTable} from './pages/cards-table/cards-table';
 import {CardDeckService} from "./core/services/card-deck-service";
 require('animate.css/source/_base.css');
 require('animate.css/source/zooming_entrances/zoomInUp.css');
 require('animate.css/source/flippers/flip.css');
+// TODO require only on dev env
 require('../plugins/cordova-plugin-screen-orientation/www/screenorientation');
 
 declare var navigator: {
@@ -30,7 +31,7 @@ class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      window.screen['lockOrientation']('landscape');
+      screen['lockOrientation']('landscape');
 
       /**
        * Handle Android back button until it implements natively https://github.com/driftyco/ionic/issues/5071

@@ -1,4 +1,4 @@
-import {Page, NavController, NavParams} from "ionic-framework/index";
+import {Page, NavController, NavParams} from "ionic-angular";
 import {CardDeckService} from "../../core/services/card-deck-service";
 import {AbcCardDeck} from "../../core/classes/abc-card-deck";
 import {AbcCard} from "../../core/classes/abc-card";
