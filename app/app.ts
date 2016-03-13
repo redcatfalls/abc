@@ -4,6 +4,7 @@ import {App, IonicApp, Platform, Alert} from 'ionic-angular';
 import {CardsTable} from './pages/cards-table/cards-table';
 import {CardDeckService} from "./core/services/card-deck-service";
 import {ScreenOrientation} from "./core/classes/screen-orientation";
+// import {enableProdMode} from "angular2/core";
 
 require('animate.css/source/_base.css');
 require('animate.css/source/zooming_entrances/zoomInUp.css');
@@ -14,6 +15,9 @@ declare var navigator: {
     exitApp()
   }
 };
+
+// TODO enable only on production
+// enableProdMode();
 
 @App({
   templateUrl: 'build/app.html',
