@@ -1,11 +1,16 @@
-<ion-content padding class="getting-started">
+<ion-content padding class="comparison-table">
 
-  <ul class="abc">
-    <li *ngFor="#card of deck.cards" [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
-        class="abc-letter {{card.props.color}}">
-      <a (click)="guessCard(card)">{{card.value}}</a>
-    </li>
-  </ul>
+  <div class="cont">
+    <ul class="abc">
+      <li *ngFor="#card of deck.cards" [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
+          class="abc-letter {{card.prop.color}}">
+        <a (click)="guessCard(card)">
+          <div class="abc-letter-face"><span class="abc-letter-char"></span><span class="abc-letter-backing"></span></div>
+          {{card.value}}
+        </a>
+      </li>
+    </ul>
+  </div>
 
 </ion-content>
 

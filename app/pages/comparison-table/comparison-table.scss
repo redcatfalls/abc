@@ -1,0 +1,184 @@
+$green-color: #8bc34a;
+$red-color: #FF5722;
+$font-size: 4em;
+$card-size: 3em;
+$cards-count: 3;
+$border-radius: 0.2em;
+
+.comparison-table {
+  @-webkit-keyframes bounce {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-2em) rotateZ(10deg);
+      transform: translateY(-2em) rotateZ(10deg);
+    }
+    60% {
+      -webkit-transform: translateY(-2.2em) rotatez(-12deg);
+      transform: translateY(-2.2em) rotatez(-12deg);
+    }
+    90% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes bounce {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-2em) rotateZ(10deg);
+      transform: translateY(-2em) rotateZ(10deg);
+    }
+    60% {
+      -webkit-transform: translateY(-2.2em) rotatez(-12deg);
+      transform: translateY(-2.2em) rotatez(-12deg);
+    }
+    90% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  //html,
+  //body {
+  //
+  //
+  //  background: -webkit-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* Chrome 10+, Saf5.1+ */
+  //  background:    -moz-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* FF3.6+ */
+  //  background:     -ms-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* IE10 */
+  //  background:      -o-linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* Opera 11.10+ */
+  //  background:         linear-gradient(90deg, #83a4d4 10%, #b6fbff 90%); /* W3C */
+  //}
+  //.container {
+  //
+  //  width: 100%;
+  //}
+
+  .cont {
+    //border: solid 1px #616161;
+    //display: flex;
+    //flex-wrap: wrap;
+    //align-items: stretch;
+    //margin: auto;
+    //padding: .25em;
+    //font-size: 56px;
+    //width: 12em;
+    //margin: auto;
+    //list-style: none;
+    //font: normal normal #{$font-size} / #{$card-size} sans-serif;
+    //text-align: center;
+    //text-transform: uppercase;
+    //width: 400px;
+  }
+
+  .abc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: auto;
+    //padding: .25em;
+    //width: 100%;
+    //max-width: 7.2em;
+    width: $card-size * $cards-count;
+    list-style: none;
+    font: normal normal #{$font-size} / #{$card-size} sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border: solid $border-radius #616161;
+    //box-shadow: inset 0 0 0 0.25em #616161;
+    //border: solid 0 #616161;
+    //perspective: 1000px;
+    //top: -15px;
+    //left: -15px;
+    //right: -15px;
+    //bottom: -15px;
+    border-radius: 15px;
+  }
+
+  .abc-letter {
+    position: relative;
+    flex: 1 1 ($card-size - $border-radius);
+    height: $card-size;
+    perspective: 800px;
+    color: white;
+
+    a {
+      color: white;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .abc-letter-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: right top;
+    transition: .25s ease;
+  }
+  .abc-letter-char, .abc-letter-backing, .abc-letter-definiton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .abc-letter-char {
+    z-index: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  .abc-letter-char:after {
+    content: attr(data-letter);
+  }
+  .abc-letter-backing {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  .abc-letter-definition {
+    z-index: 0;
+    margin: 0;
+    color: white;
+    font-size: .4em;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  /*
+  .abc-letter:hover {
+    z-index: 1;
+  }
+  .abc-letter:hover .abc-letter-face {
+    -webkit-transform: rotateY(-100deg);
+            transform: rotateY(-100deg);
+  }
+  .abc-letter:hover .abc-letter-definition {
+    -webkit-animation: bounce .5s .2s infinite ease forwards;
+            animation: bounce .5s .2s infinite ease forwards;
+  }
+  */
+
+
+  .abc-letter:hover {
+    z-index: 1;
+  }
+  .abc-letter:hover .abc-letter-face {
+    -webkit-transform: rotateY(-100deg);
+    transform: rotateY(-100deg);
+  }
+  .abc-letter:hover .abc-letter-definition {
+    -webkit-animation: bounce .5s .2s infinite ease forwards;
+    animation: bounce .5s .2s infinite ease forwards;
+  }
+
+}

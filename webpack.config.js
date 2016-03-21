@@ -4,12 +4,6 @@ const CleanPlugin = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  //entry: [
-  //  path.normalize('es6-shim/es6-shim.min'),
-  //  'reflect-metadata',
-  //  path.normalize('zone.js/dist/zone-microtask'),
-  //  path.resolve('app/app')
-  //],
   entry: {
     vendors: [
       path.normalize('es6-shim/es6-shim.min'),
@@ -20,7 +14,6 @@ module.exports = {
   },
   output: {
     path: path.resolve('www/build/js'),
-    //filename: 'app.bundle.js',
     filename: '[name].bundle.js',
     //chunkFilename: '[name].bundle.[chunkhash].js',
     pathinfo: false, // show module paths in the bundle, handy for debugging
@@ -56,6 +49,10 @@ module.exports = {
         test: /\.js$/,
         include: path.resolve('node_modules/angular2'),
         loader: 'strip-sourcemap'
+      },
+      {
+        test: /\.(jpe?g)/i,
+        loaders: ['file?hash=sha512&digest=hex&context=./app&name=../images/[name].[hash].[ext]', 'image-webpack?&optimizationLevel=5']
       }
     ],
     noParse: [
@@ -77,7 +74,7 @@ module.exports = {
     //new webpack.NoErrorsPlugin()
     new CleanPlugin('www/build'),
     new HtmlPlugin({
-      title: 'Ionic App',
+      title: 'ABC App',
       chunks: ['app', 'vendors'],
       filename: '../../index.html',
       inject: true,

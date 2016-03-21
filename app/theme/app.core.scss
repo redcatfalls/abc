@@ -9,6 +9,11 @@
 
 @import "../pages/cards-table/cards-table";
 @import "../pages/cards-table/cat";
+@import "../pages/comparison-table/comparison-table";
+
+html {
+  touch-action: manipulation;
+}
 
 .on-top {
   z-index: 999;
