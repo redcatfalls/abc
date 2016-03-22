@@ -186,45 +186,83 @@ $cards-count: 3;
     @include letter-coloring(#283593, #3F51B5, #3949AB);
 }
 
-
-.abc-letter:nth-child(13n+1) {
-  font-family: Oswald, serif;
+.font-a {
+    font-family: Oswald, serif;
 }
-.abc-letter:nth-child(13n+2) {
-  font-family: Arvo, serif;
+.font-b {
+    font-family: Arvo, serif;
 }
-.abc-letter:nth-child(13n+3) {
-  font-family: Montserrat, serif;
+.font-c {
+    font-family: Montserrat, serif;
 }
-.abc-letter:nth-child(13n+4) {
-  font-family: Lobster, serif;
+.font-d {
+    font-family: Lobster, serif;
 }
-.abc-letter:nth-child(13n+5) {
-  font-family: Pacifico, serif;
+.font-e {
+    font-family: Pacifico, serif;
 }
-.abc-letter:nth-child(13n+6) {
-  font-family: Bangers, serif;
+.font-f {
+    font-family: Bangers, serif;
 }
-.abc-letter:nth-child(13n+7) {
-  font-family: "Bree Serif", serif;
+.font-g {
+    font-family: "Bree Serif", serif;
 }
-.abc-letter:nth-child(13n+8) {
-  font-family: "Crafty Girls", serif;
+.font-h {
+    font-family: "Crafty Girls", serif;
 }
-.abc-letter:nth-child(13n+9) {
-  font-family: "Abril Fatface", serif;
+.font-i {
+    font-family: "Abril Fatface", serif;
 }
-.abc-letter:nth-child(13n+10) {
-  font-family: "Fontdiner Swanky", serif;
+.font-j {
+    font-family: "Fontdiner Swanky", serif;
 }
-.abc-letter:nth-child(13n+11) {
-  font-family: "Fugaz One", serif;
+.font-k {
+    font-family: "Fugaz One", serif;
 }
-.abc-letter:nth-child(13n+12) {
-  font-family: "Poiret One", serif;
+.font-l {
+    font-family: "Poiret One", serif;
 }
-.abc-letter:nth-child(13n+13) {
-  font-family: "Fredericka the Great", serif;
+.font-m {
+    font-family: "Fredericka the Great", serif;
+}
+.font-n {
+    font-family: Oswald, serif;
+}
+.font-o {
+    font-family: Arvo, serif;
+}
+.font-p {
+    font-family: Montserrat, serif;
+}
+.font-q {
+    font-family: Lobster, serif;
+}
+.font-r {
+    font-family: Pacifico, serif;
+}
+.font-s {
+    font-family: Bangers, serif;
+}
+.font-t {
+    font-family: "Bree Serif", serif;
+}
+.font-u {
+    font-family: "Crafty Girls", serif;
+}
+.font-v {
+    font-family: "Abril Fatface", serif;
+}
+.font-w {
+    font-family: "Fontdiner Swanky", serif;
+}
+.font-x {
+    font-family: "Fugaz One", serif;
+}
+.font-y {
+    font-family: "Poiret One", serif;
+}
+.font-z {
+    font-family: "Fredericka the Great", serif;
 }
 
 p {
