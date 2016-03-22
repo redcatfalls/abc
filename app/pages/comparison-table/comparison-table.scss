@@ -181,4 +181,20 @@ $border-radius: 0.2em;
     animation: bounce .5s .2s infinite ease forwards;
   }
 
+  .comp-message {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 10px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-size:50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
 }
+
