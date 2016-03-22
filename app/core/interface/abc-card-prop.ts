@@ -1,4 +1,5 @@
 export interface AbcCardProp {
-  css: Object,
-  image: string
+    font : string,
+    class: string,
+    image: string
 }
