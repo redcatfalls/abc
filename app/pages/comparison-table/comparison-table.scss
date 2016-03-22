@@ -182,3 +182,86 @@ $border-radius: 0.2em;
   }
 
 }
+
+
+/* TODO remove */
+
+.card-a {
+    @include letter-coloring(#c62828, #f44336, #e53935);
+}
+.card-b {
+    @include letter-coloring(#F9A825, #FFEB3B, #FDD835);
+}
+.card-c {
+    @include letter-coloring(#6A1B9A, #9C27B0, #8E24AA);
+}
+.card-d {
+    @include letter-coloring(#4527A0, #673AB7, #5E35B1);
+}
+.card-e {
+    @include letter-coloring(#bc680d, #f29b3d, #ec8310);
+}
+.card-f {
+    @include letter-coloring(#1565C0, #2196F3, #1E88E5);
+}
+.card-g {
+    @include letter-coloring(#00838F, #00BCD4, #00ACC1);
+}
+.card-h {
+    @include letter-coloring(#c62828, #f44336, #e53935);
+}
+.card-i {
+    @include letter-coloring(#00695C, #009688, #00897B);
+}
+.card-j {
+    @include letter-coloring(#2E7D32, #4CAF50, #43A047);
+}
+.card-k {
+    @include letter-coloring(#558B2F, #8BC34A, #7CB342);
+}
+.card-l {
+    @include letter-coloring(#9E9D24, #CDDC39, #C0CA33);
+}
+.card-m {
+    @include letter-coloring(#AD1457, #E91E63, #D81B60);
+}
+.card-n {
+    @include letter-coloring(#FF8F00, #FFC107, #FFB300);
+}
+.card-o {
+    @include letter-coloring(#EF6C00, #FF9800, #FB8C00);
+}
+.card-p {
+    @include letter-coloring(#D84315, #FF5722, #F4511E);
+}
+.card-q {
+    @include letter-coloring(#4E342E, #795548, #6D4C41);
+}
+.card-r {
+    @include letter-coloring(#424242, #9E9E9E, #757575);
+}
+.card-s {
+    @include letter-coloring(#37474F, #607D8B, #546E7A);
+}
+.card-t {
+    @include letter-coloring(#AA00FF, #EA80FC, #E040FB);
+}
+.card-u {
+    @include letter-coloring(#d50000, #ff8a80, #ff5252);
+}
+.card-v {
+    @include letter-coloring(#00C853, #B9F6CA, #64FFDA);
+}
+.card-w {
+    @include letter-coloring(#2962FF, #82B1FF, #448AFF);
+}
+.card-x {
+    @include letter-coloring(#bc170d, #f2483d, #ec1d10);
+}
+.card-y {
+    @include letter-coloring(#00BFA5, #A7FFEB, #64FFDA);
+}
+.card-z {
+    @include letter-coloring(#283593, #3F51B5, #3949AB);
+}
+

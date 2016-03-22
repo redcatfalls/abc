@@ -107,134 +107,85 @@ $cards-count: 3;
   }
 }
 
-.abc-letter {
-  &:nth-child(1) {
-    //@include letter-coloring(#bcb90d, #f2ef3d, #ece810);
+.card-a {
     @include letter-coloring(#c62828, #f44336, #e53935);
-  }
-
-  &:nth-child(2) {
-    //@include letter-coloring(#97bc0d, #cbf23d, #bdec10);
-    @include letter-coloring(#F9A825, #FFEB3B, #FDD835);
-  }
-
-  &:nth-child(3) {
-    //@include letter-coloring(#6ebc0d, #a2f23d, #8aec10);
-    @include letter-coloring(#6A1B9A, #9C27B0, #8E24AA);
-  }
-
-  &:nth-child(4) {
-    //@include letter-coloring(#46bc0d, #78f23d, #58ec10);
-    @include letter-coloring(#4527A0, #673AB7, #5E35B1);
-  }
-
-  &:nth-child(5) {
-    //@include letter-coloring(#1dbc0d, #4ef23d, #25ec10);
-    @include letter-coloring(#bc680d, #f29b3d, #ec8310);
-  }
-
-  &:nth-child(6) {
-    //@include letter-coloring(#0dbc25, #3df256, #10ec2e);
-    @include letter-coloring(#1565C0, #2196F3, #1E88E5);
-  }
-
-  &:nth-child(7) {
-    //@include letter-coloring(#0dbc4d, #3df27f, #10ec61);
-    @include letter-coloring(#00838F, #00BCD4, #00ACC1);
-  }
-
-  &:nth-child(8) {
-    //@include letter-coloring(#0dbc76, #3df2a9, #10ec93);
-    @include letter-coloring(#00695C, #009688, #00897B);
-  }
-
-  &:nth-child(9) {
-    //@include letter-coloring(#0dbc9e, #3df2d3, #10ecc6);
-    @include letter-coloring(#2E7D32, #4CAF50, #43A047);
-  }
-
-  &:nth-child(10) {
-    //@include letter-coloring(#0db2bc, #3de7f2, #10dfec);
-    @include letter-coloring(#558B2F, #8BC34A, #7CB342);
-  }
-
-  &:nth-child(11) {
-    @include letter-coloring(#9E9D24, #CDDC39, #C0CA33);
-    //@include letter-coloring(#0d89bc, #3dbef2, #10acec);
-  }
-
-  &:nth-child(12) {
-    @include letter-coloring(#AD1457, #E91E63, #D81B60);
-    //@include letter-coloring(#0d61bc, #3d94f2, #1079ec);
-  }
-
-  &:nth-child(13) {
-    @include letter-coloring(#FF8F00, #FFC107, #FFB300);
-    //@include letter-coloring(#0d38bc, #3d6af2, #1047ec);
-  }
-
-  &:nth-child(14) {
-    @include letter-coloring(#EF6C00, #FF9800, #FB8C00);
-    //@include letter-coloring(#0d10bc, #3d40f2, #1014ec);
-  }
-
-  &:nth-child(15) {
-    @include letter-coloring(#D84315, #FF5722, #F4511E);
-    //@include letter-coloring(#320dbc, #643df2, #3f10ec);
-  }
-
-  &:nth-child(16) {
-    @include letter-coloring(#4E342E, #795548, #6D4C41);
-    //@include letter-coloring(#5b0dbc, #8d3df2, #7210ec);
-  }
-
-  &:nth-child(17) {
-    @include letter-coloring(#424242, #9E9E9E, #757575);
-    //@include letter-coloring(#830dbc, #b73df2, #a410ec);
-  }
-
-  &:nth-child(18) {
-    @include letter-coloring(#37474F, #607D8B, #546E7A);
-    //@include letter-coloring(#ac0dbc, #e13df2, #d710ec);
-  }
-
-  &:nth-child(19) {
-    @include letter-coloring(#AA00FF, #EA80FC, #E040FB);
-    //@include letter-coloring(#bc0da4, #f23dd9, #ec10ce);
-  }
-
-  &:nth-child(20) {
-    @include letter-coloring(#d50000, #ff8a80, #ff5252);
-    //@include letter-coloring(#bc0d7c, #f23db0, #ec109b);
-  }
-
-  &:nth-child(21) {
-    @include letter-coloring(#00C853, #B9F6CA, #64FFDA);
-    //@include letter-coloring(#bc0d53, #f23d86, #ec1069);
-  }
-
-  &:nth-child(22) {
-    @include letter-coloring(#2962FF, #82B1FF, #448AFF);
-    //@include letter-coloring(#bc0d2b, #f23d5c, #ec1036);
-  }
-
-  &:nth-child(23) {
-    @include letter-coloring(#bc170d, #f2483d, #ec1d10);
-  }
-
-  &:nth-child(24) {
-    @include letter-coloring(#00BFA5, #A7FFEB, #64FFDA);
-    //@include letter-coloring(#bc400d, #f2713d, #ec5010);
-  }
-
-  &:nth-child(25) {
-    @include letter-coloring(#283593, #3F51B5, #3949AB);
-  }
-
-  &:nth-child(26) {
-    @include letter-coloring(#bc910d, #f2c53d, #ecb510);
-  }
 }
+.card-b {
+    @include letter-coloring(#F9A825, #FFEB3B, #FDD835);
+}
+.card-c {
+    @include letter-coloring(#6A1B9A, #9C27B0, #8E24AA);
+}
+.card-d {
+    @include letter-coloring(#4527A0, #673AB7, #5E35B1);
+}
+.card-e {
+    @include letter-coloring(#bc680d, #f29b3d, #ec8310);
+}
+.card-f {
+    @include letter-coloring(#1565C0, #2196F3, #1E88E5);
+}
+.card-g {
+    @include letter-coloring(#00838F, #00BCD4, #00ACC1);
+}
+.card-h {
+    @include letter-coloring(#c62828, #f44336, #e53935);
+}
+.card-i {
+    @include letter-coloring(#00695C, #009688, #00897B);
+}
+.card-j {
+    @include letter-coloring(#2E7D32, #4CAF50, #43A047);
+}
+.card-k {
+    @include letter-coloring(#558B2F, #8BC34A, #7CB342);
+}
+.card-l {
+    @include letter-coloring(#9E9D24, #CDDC39, #C0CA33);
+}
+.card-m {
+    @include letter-coloring(#AD1457, #E91E63, #D81B60);
+}
+.card-n {
+    @include letter-coloring(#FF8F00, #FFC107, #FFB300);
+}
+.card-o {
+    @include letter-coloring(#EF6C00, #FF9800, #FB8C00);
+}
+.card-p {
+    @include letter-coloring(#D84315, #FF5722, #F4511E);
+}
+.card-q {
+    @include letter-coloring(#4E342E, #795548, #6D4C41);
+}
+.card-r {
+    @include letter-coloring(#424242, #9E9E9E, #757575);
+}
+.card-s {
+    @include letter-coloring(#37474F, #607D8B, #546E7A);
+}
+.card-t {
+    @include letter-coloring(#AA00FF, #EA80FC, #E040FB);
+}
+.card-u {
+    @include letter-coloring(#d50000, #ff8a80, #ff5252);
+}
+.card-v {
+    @include letter-coloring(#00C853, #B9F6CA, #64FFDA);
+}
+.card-w {
+    @include letter-coloring(#2962FF, #82B1FF, #448AFF);
+}
+.card-x {
+    @include letter-coloring(#bc170d, #f2483d, #ec1d10);
+}
+.card-y {
+    @include letter-coloring(#00BFA5, #A7FFEB, #64FFDA);
+}
+.card-z {
+    @include letter-coloring(#283593, #3F51B5, #3949AB);
+}
+
 
 .abc-letter:nth-child(13n+1) {
   font-family: Oswald, serif;

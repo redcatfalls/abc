@@ -72,7 +72,7 @@
   <div style="clear: both"></div>
 
   <ul class="abc">
-    <li *ngFor="#card of deck.cards" [hidden]="card.hidden" class="abc-letter animated zoomInUp {{card.prop.color}}">
+    <li *ngFor="#card of deck.cards" [hidden]="card.hidden" class="abc-letter animated zoomInUp {{card.prop.css.card}}">
       <div class="abc-letter-face">
         <a (click)="selectCard(card)">
           <span class="abc-letter-char">{{card.value}}</span>

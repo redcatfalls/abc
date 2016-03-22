@@ -3,11 +3,14 @@
   <div class="cont">
     <ul class="abc">
       <li *ngFor="#card of deck.cards" [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
-          class="abc-letter {{card.prop.color}}">
-        <a (click)="guessCard(card)">
+          class="abc-letter {{card.prop.css.card}}">
+        <a (click)="guessCard(card)" *ngIf="card.guessed === false">
           <div class="abc-letter-face"><span class="abc-letter-char"></span><span class="abc-letter-backing"></span></div>
-          {{card.value}}
+            {{card.value}}
         </a>
+        <span *ngIf="card.guessed === true" class="abc-letter-char">
+            {{card.value}}
+        </span>
       </li>
     </ul>
   </div>
