@@ -64,11 +64,10 @@
 
         <div class="message-box" style="float: left; ">
             <div class="message">
-                <a href="#" class="comp-message {{card.prop.class}} {{card.prop.font}}">
+                <a href="#" class="comp-message selected-{{card.prop.class}} {{card.prop.font}}"
+                >
                     {{card.value}}
                 </a>
-
-                <ion-icon name="arrow-round-back"></ion-icon>
             </div>
         </div>
     </div>
@@ -92,8 +91,4 @@
 
 <button small fab fab-bottom fab-left nav-pop class="on-top back-fab" secondary>
   <ion-icon name="arrow-round-back"></ion-icon>
-</button>
-
-<button large fab fab-bottom fab-right class="on-top letter-fab">
-  {{card.value}}
 </button>
