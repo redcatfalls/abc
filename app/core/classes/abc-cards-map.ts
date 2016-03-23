@@ -2,107 +2,133 @@ import {AbcCard} from "./abc-card";
 
 export default [
   new AbcCard('A', {
-    color: '',
-    image: require('../../theme/images/abyssinian.jpg')
+    font  : 'font-a',
+    class : 'card-a',
+    image : require('../../theme/images/abyssinian.jpg')
   }),
   new AbcCard('B', {
-    color: '',
-    image: require('../../theme/images/balinese.jpg')
+    font  : 'font-b',
+    class : 'card-b',
+    image : require('../../theme/images/balinese.jpg')
   }),
   new AbcCard('C', {
-    color: '',
-    image: require('../../theme/images/chartreux.jpg')
+    font  : 'font-c',
+    class : 'card-c',
+    image : require('../../theme/images/chartreux.jpg')
   }),
   new AbcCard('D', {
-    color: '',
-    image: require('../../theme/images/devon-rex.jpg')
+    font  : 'font-d',
+    class : 'card-d',
+    image : require('../../theme/images/devon-rex.jpg')
   }),
   new AbcCard('E', {
-    color: '',
-    image: require('../../theme/images/exotic.jpg')
+    font  : 'font-e',
+    class : 'card-e',
+    image : require('../../theme/images/exotic.jpg')
   }),
   new AbcCard('F', {
-    color: '',
-    image: require('../../theme/images/foldex-cat.jpg')
+    font  : 'font-f',
+    class : 'card-f',
+    image : require('../../theme/images/foldex-cat.jpg')
   }),
   new AbcCard('G', {
-    color: '',
-    image: require('../../theme/images/german-rex-cat.jpg')
+    font  : 'font-g',
+    class : 'card-g',
+    image : require('../../theme/images/german-rex-cat.jpg')
   }),
   new AbcCard('H', {
-    color: '',
-    image: require('../../theme/images/havana-brown.jpg')
+    font  : 'font-h',
+    class : 'card-h',
+    image : require('../../theme/images/havana-brown.jpg')
   }),
   new AbcCard('I', {
-    color: '',
-    image: require('../../theme/images/internet-cat.jpg')
+    font  : 'font-i',
+    class : 'card-i',
+    image : require('../../theme/images/internet-cat.jpg')
   }),
   new AbcCard('J', {
-    color: '',
-    image: require('../../theme/images/japanese-bobtail.jpg')
+    font  : 'font-j',
+    class : 'card-j',
+    image : require('../../theme/images/japanese-bobtail.jpg')
   }),
   new AbcCard('K', {
-    color: '',
-    image: require('../../theme/images/khao-manee.jpg')
+    font  : 'font-k',
+    class : 'card-k',
+    image : require('../../theme/images/khao-manee.jpg')
   }),
   new AbcCard('L', {
-    color: '',
-    image: require('../../theme/images/la-perm.jpg')
+    font  : 'font-l',
+    class : 'card-l',
+    image : require('../../theme/images/la-perm.jpg')
   }),
   new AbcCard('M', {
-    color: '',
-    image: require('../../theme/images/maine-coon.jpg')
+    font  : 'font-m',
+    class : 'card-m',
+    image : require('../../theme/images/maine-coon.jpg')
   }),
   new AbcCard('N', {
-    color: '',
-    image: require('../../theme/images/nebelung-cat.jpg')
+    font  : 'font-n',
+    class : 'card-n',
+    image : require('../../theme/images/nebelung-cat.jpg')
   }),
   new AbcCard('O', {
-    color: '',
-    image: require('../../theme/images/oriental-shorthair.jpg')
+    font  : 'font-o',
+    class : 'card-o',
+    image : require('../../theme/images/oriental-shorthair.jpg')
   }),
   new AbcCard('P', {
-    color: '',
-    image: require('../../theme/images/persian.jpg')
+    font  : 'font-p',
+    class : 'card-p',
+    image : require('../../theme/images/persian.jpg')
   }),
   new AbcCard('Q', {
-    color: '',
-    image: require('../../theme/images/questcat.jpg')
+    font  : 'font-q',
+    class : 'card-q',
+    image : require('../../theme/images/questcat.jpg')
   }),
   new AbcCard('R', {
-    color: '',
-    image: require('../../theme/images/ragamuffin.jpg')
+    font  : 'font-r',
+    class : 'card-r',
+    image : require('../../theme/images/ragamuffin.jpg')
   }),
   new AbcCard('S', {
-    color: '',
-    image: require('../../theme/images/siamese.jpg')
+    font  : 'font-s',
+    class : 'card-s',
+    image : require('../../theme/images/siamese.jpg')
   }),
   new AbcCard('T', {
-    color: '',
-    image: require('../../theme/images/thai.jpg')
+    font  : 'font-t',
+    class : 'card-t',
+    image : require('../../theme/images/thai.jpg')
   }),
   new AbcCard('U', {
-    color: '',
-    image: require('../../theme/images/ukrainian-levkoy.jpg')
+    font  : 'font-u',
+    class : 'card-u',
+    image : require('../../theme/images/ukrainian-levkoy.jpg')
   }),
   new AbcCard('V', {
-    color: '',
-    image: require('../../theme/images/vendettacat.jpg')
+    font  : 'font-v',
+    class : 'card-v',
+    image : require('../../theme/images/vendettacat.jpg')
   }),
   new AbcCard('W', {
-    color: '',
-    image: require('../../theme/images/wildcat-animal-nature-cat-natural-animals-ears.jpg')
+    font  : 'font-w',
+    class : 'card-w',
+    image : require('../../theme/images/wildcat-animal-nature-cat-natural-animals-ears.jpg')
   }),
   new AbcCard('X', {
-    color: '',
-    image: require('../../theme/images/xman.jpg')
+    font  : 'font-x',
+    class : 'card-x',
+    image : require('../../theme/images/xman.jpg')
   }),
   new AbcCard('Y', {
-    color: '',
-    image: require('../../theme/images/yellowcat.jpg')
+    font  : 'font-y',
+    class : 'card-y',
+    image : require('../../theme/images/yellowcat.jpg')
   }),
   new AbcCard('Z', {
-    color: '',
-    image: require('../../theme/images/zzzsleepcat.jpg')
+    font  : 'font-z',
+    class : 'card-z',
+    image : require('../../theme/images/zzzsleepcat.jpg')
   }),
 ]

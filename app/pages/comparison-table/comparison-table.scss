@@ -181,4 +181,177 @@ $border-radius: 0.2em;
     animation: bounce .5s .2s infinite ease forwards;
   }
 
+  .comp-message {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 10px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    font-size:50px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+}
+
+//TODO use One scss
+.card-a {
+    @include letter-coloring(#c62828, #f44336, #e53935);
+}
+.selected-card-a {
+  background: #f44336;
+}
+.card-b {
+    @include letter-coloring(#F9A825, #FFEB3B, #FDD835);
+}
+.selected-card-b {
+  background: #FFEB3B;
+}
+.card-c {
+    @include letter-coloring(#6A1B9A, #9C27B0, #8E24AA);
+}
+.selected-card-c {
+  background: #9C27B0;
+}
+.card-d {
+    @include letter-coloring(#4527A0, #673AB7, #5E35B1);
+}
+.selected-card-d {
+  background: #673AB7;
+}
+.card-e {
+    @include letter-coloring(#bc680d, #f29b3d, #ec8310);
+}
+.selected-card-e {
+  background: #f29b3d;
+}
+.card-f {
+    @include letter-coloring(#1565C0, #2196F3, #1E88E5);
+}
+.selected-card-f {
+  background: #2196F3;
+}
+.card-g {
+    @include letter-coloring(#00838F, #00BCD4, #00ACC1);
+}
+.selected-card-g {
+  background: #00BCD4;
+}
+.card-h {
+    @include letter-coloring(#c62828, #f44336, #e53935);
+}
+.selected-card-h {
+  background: #f44336;
+}
+.card-i {
+    @include letter-coloring(#00695C, #009688, #00897B);
+}
+.selected-card-i {
+  background: #009688;
+}
+.card-j {
+    @include letter-coloring(#2E7D32, #4CAF50, #43A047);
+}
+.selected-card-j {
+  background: #4CAF50;
+}
+.card-k {
+    @include letter-coloring(#558B2F, #8BC34A, #7CB342);
+}
+.selected-card-k {
+  background: #8BC34A;
+}
+.card-l {
+    @include letter-coloring(#9E9D24, #CDDC39, #C0CA33);
+}
+.selected-card-l {
+  background: #CDDC39;
+}
+.card-m {
+    @include letter-coloring(#AD1457, #E91E63, #D81B60);
+}
+.selected-card-m {
+  background: #E91E63;
+}
+.card-n {
+    @include letter-coloring(#FF8F00, #FFC107, #FFB300);
+}
+.selected-card-n {
+  background: #FFC107;
+}
+.card-o {
+    @include letter-coloring(#EF6C00, #FF9800, #FB8C00);
+}
+.selected-card-o {
+  background: #FF9800;
+}
+.card-p {
+    @include letter-coloring(#D84315, #FF5722, #F4511E);
+}
+.selected-card-p {
+  background: #FF5722;
+}
+.card-q {
+    @include letter-coloring(#4E342E, #795548, #6D4C41);
+}
+.selected-card-q {
+  background: #795548;
+}
+.card-r {
+    @include letter-coloring(#424242, #9E9E9E, #757575);
+}
+.selected-card-r {
+  background: #9E9E9E;
+}
+.card-s {
+    @include letter-coloring(#37474F, #607D8B, #546E7A);
+}
+.selected-card-s {
+  background: #607D8B;
+}
+.card-t {
+    @include letter-coloring(#AA00FF, #EA80FC, #E040FB);
+}
+.selected-card-t {
+  background: #EA80FC;
+}
+.card-u {
+    @include letter-coloring(#d50000, #ff8a80, #ff5252);
+}
+.selected-card-u {
+  background: #ff8a80;
+}
+.card-v {
+    @include letter-coloring(#00C853, #B9F6CA, #64FFDA);
+}
+.selected-card-v {
+  background: #B9F6CA;
+}
+.card-w {
+    @include letter-coloring(#2962FF, #82B1FF, #448AFF);
+}
+.selected-card-w {
+  background: #82B1FF;
+}
+.card-x {
+    @include letter-coloring(#bc170d, #f2483d, #ec1d10);
+}
+.selected-card-x {
+  background: #f2483d;
+}
+.card-y {
+    @include letter-coloring(#00BFA5, #A7FFEB, #64FFDA);
+}
+.selected-card-y {
+  background: #A7FFEB;
+}
+.card-z {
+    @include letter-coloring(#283593, #3F51B5, #3949AB);
+}
+.selected-card-z {
+  background: #3F51B5;
 }

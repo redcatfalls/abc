@@ -35,7 +35,7 @@ export class ComparisonTable {
 
       setTimeout(() => {
         this.nav.pop();
-      }, 100);
+      }, 500);
     } else {
       card.mistakenly = true;
     }
