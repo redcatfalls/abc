@@ -4,9 +4,11 @@ import {ComparisonTable} from "../comparison-table/comparison-table";
 import {AbcCardDeck} from "../../core/classes/abc-card-deck";
 import {AbcCard} from "../../core/classes/abc-card";
 import {CardGuessable} from "../../core/classes/card-guessable";
+import {CatAssistant} from "../../components/cat-assistant/cat-assistant.component";
 
 @Page({
-  template: require('./cards-table.html')
+  template: require('./cards-table.html'),
+  directives: [CatAssistant]
 })
 export class CardsTable {
   deck: AbcCardDeck;

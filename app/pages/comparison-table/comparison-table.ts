@@ -2,9 +2,11 @@ import {Page, NavController, NavParams} from "ionic-angular";
 import {CardDeckService} from "../../core/services/card-deck-service";
 import {AbcCardDeck} from "../../core/classes/abc-card-deck";
 import {AbcCard} from "../../core/classes/abc-card";
+import {CatAssistant} from "../../components/cat-assistant/cat-assistant.component";
 
 @Page({
-  template: require('./comparison-table.html')
+  template: require('./comparison-table.html'),
+  directives: [CatAssistant]
 })
 export class ComparisonTable {
   deck: AbcCardDeck;
