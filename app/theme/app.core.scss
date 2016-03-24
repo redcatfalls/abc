@@ -8,8 +8,8 @@
 // App Shared Sass variables belong in app.variables.scss.
 
 @import "../pages/cards-table/cards-table";
-@import "../pages/cards-table/cat";
 @import "../pages/comparison-table/comparison-table";
+@import "../components/cat-assistant/cat.scss";
 
 html {
   touch-action: manipulation;

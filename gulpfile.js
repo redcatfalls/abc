@@ -17,7 +17,7 @@ gulp.task('watch', ['sass', 'html', 'fonts'], function(){
   gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
   return buildWebpack({ watch: true });
 });
-gulp.task('build', ['clean', 'sass', 'html', 'fonts'], buildWebpack);
+gulp.task('build', ['sass', 'html', 'fonts'], buildWebpack);
 gulp.task('sass', buildSass);
 gulp.task('html', copyHTML);
 gulp.task('fonts', copyFonts);
