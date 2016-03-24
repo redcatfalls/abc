@@ -23,9 +23,9 @@ declare var navigator: {
   providers: [CardDeckService],
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
-class MyApp {
+class AbcGameApp {
   // make HelloIonicPage the root (or first) page
-  rootPage = CardsTable;
+  rootPage: any = CardsTable;
   //pages: Array<{title: string, component: any}>;
   //
   constructor(private app: IonicApp, private platform: Platform) {
@@ -76,12 +76,4 @@ class MyApp {
       // StatusBar.setStyle(StatusBar.LIGHT_CONTENT)
     });
   }
-
-  //openPage(page) {
-  //  // close the menu when clicking a link from the menu
-  //  this.app.getComponent('leftMenu').close();
-  //  // navigate to the new page if it is not the current page
-  //  let nav = this.app.getComponent('nav');
-  //  nav.setRoot(page.component);
-  //}
 }

@@ -72,7 +72,7 @@ module.exports = {
 
   plugins: [
     //new webpack.NoErrorsPlugin()
-    new CleanPlugin('www/build'),
+    // new CleanPlugin('www/build'),
     new HtmlPlugin({
       title: 'ABC App',
       chunks: ['app', 'vendors'],

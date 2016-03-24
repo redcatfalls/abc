@@ -9,7 +9,7 @@ Pre requirements:
 2. npm 3+
 
 ``` bash
-npm install -g ionic@beta webpack cordova tsd
+npm install -g ionic@beta webpack cordova typings gulp
 git clone git@github.com:redcatfalls/abc.git abc-game
 cd abc-game
 npm install
