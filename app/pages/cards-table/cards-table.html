@@ -1,0 +1,29 @@
+<ion-content padding class="getting-started">
+  <div class="cat-container">
+    <cat-assistant></cat-assistant>
+
+    <div class="message-box" style="float: left; ">
+      <div class="message">
+        <p>Miau... sort ABC</p>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both"></div>
+
+  <ul class="abc">
+    <li *ngFor="#card of deck.cards" [hidden]="card.hidden"
+        class="abc-letter animated zoomInUp {{card.prop.class}} {{card.prop.font}}">
+      <div class="abc-letter-face">
+        <a (click)="selectCard(card)">
+          <span class="abc-letter-char">{{card.value}}</span>
+          <span class="abc-letter-backing"></span>
+        </a>
+      </div>
+    </li>
+  </ul>
+
+</ion-content>
+
+<button (click)="newGame()" small fab fab-top fab-right class="on-top new-game-fab">
+  <ion-icon name="refresh"></ion-icon>
+</button>

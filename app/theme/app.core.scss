@@ -7,6 +7,19 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 
-@import "../pages/hello-ionic/hello-ionic";
+@import "../pages/cards-table/cards-table";
+@import "../pages/cards-table/cat";
+@import "../pages/comparison-table/comparison-table";
 
-@import "../pages/item-details/item-details";
+html {
+  touch-action: manipulation;
+}
+
+.on-top {
+  z-index: 999;
+}
+
+@font-face {
+  font-family: ugo-line;
+  src: url(../fonts/UGO-LINE.ttf);
+}

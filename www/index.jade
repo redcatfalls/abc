@@ -3,11 +3,13 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    meta(http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://192.168.56.1 http://192.168.56.1:35729 http://localhost:35729; connect-src 'self' ws://192.168.56.1:35729 ws://localhost:35729; font-src 'self' http://fonts.gstatic.com")
     title= htmlWebpackPlugin.options.title
     - each css in htmlWebpackPlugin.files.css
       link(rel="stylesheet" href= css)
     link(rel="stylesheet" ios-href="build/css/app.ios.css")
     link(rel="stylesheet" md-href="build/css/app.md.css")
+    link(rel="stylesheet" wp-href="build/css/app.wp.css")
   body
     ion-app
-    script(defer src="cordova.js")
+    script(src="cordova.js")

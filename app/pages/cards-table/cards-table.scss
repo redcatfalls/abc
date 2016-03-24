@@ -1,0 +1,370 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald|Arvo|Montserrat|Lobster|Pacifico|Bangers|Bree+Serif|Crafty+Girls|Abril+Fatface|Fontdiner+Swanky|Fugaz+One|Poiret+One|Fredericka+the+Great);
+
+$green-color: #8bc34a;
+$red-color: #FF5722;
+$font-size: 4em;
+$card-size: 3em;
+$cards-count: 3;
+
+&.not-guessed {
+  background: transparent;
+  color: #fff !important;
+}
+
+&.mistaken {
+  color: #E2302E !important;
+}
+
+.new-game-fab,
+.back-fab,
+.letter-fab {
+  width: 46px;
+  height: 46px;
+}
+
+.abc {
+  padding: 0;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
+  font: normal normal #{$font-size} / #{$card-size} sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: $card-size * $cards-count;
+  list-style: none;
+  text-transform: uppercase;
+  perspective: 1000px;
+
+  .abc-letter {
+    position: relative;
+    flex: 1 1 $card-size;
+    height: $card-size;
+    perspective: 800px;
+    color: white;
+  }
+
+  .abc-letter-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: top left;
+    transition: .25s ease;
+  }
+  .abc-letter-char, .abc-letter-backing, .abc-letter-definiton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .abc-letter-char {
+    z-index: 1;
+    transform: rotateY(0deg);
+  }
+  .abc-letter-backing {
+    transform: rotateY(180deg);
+  }
+  .abc-letter-definition {
+    z-index: 0;
+    margin: 0;
+    color: white;
+    font-size: .4em;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .abc-letter:hover {
+    z-index: 1;
+  }
+  .abc-letter:hover .abc-letter-face {
+    transform: rotateX(45deg);
+    //transform: rotateY(-100deg);
+  }
+  .abc-letter:hover .abc-letter-definition {
+    animation: bounce .5s .2s infinite ease forwards;
+  }
+}
+
+@mixin letter-coloring($base-bg, $char-bg, $backing-bg) {
+  background: $base-bg;
+
+  .abc-letter-char{
+    background: $char-bg;
+    color: white;
+    text-shadow: -0.05em 0.05em 0 $base-bg;
+  }
+
+  .abc-letter-backing {
+    background: $backing-bg;
+  }
+}
+
+.card-a {
+    @include letter-coloring(#c62828, #f44336, #e53935);
+}
+.selected-card-a {
+  background: #f44336;
+}
+.card-b {
+    @include letter-coloring(#F9A825, #FFEB3B, #FDD835);
+}
+.selected-card-b {
+  background: #FFEB3B;
+}
+.card-c {
+    @include letter-coloring(#6A1B9A, #9C27B0, #8E24AA);
+}
+.selected-card-c {
+  background: #9C27B0;
+}
+.card-d {
+    @include letter-coloring(#4527A0, #673AB7, #5E35B1);
+}
+.selected-card-d {
+  background: #673AB7;
+}
+.card-e {
+    @include letter-coloring(#bc680d, #f29b3d, #ec8310);
+}
+.selected-card-e {
+  background: #f29b3d;
+}
+.card-f {
+    @include letter-coloring(#1565C0, #2196F3, #1E88E5);
+}
+.selected-card-f {
+  background: #2196F3;
+}
+.card-g {
+    @include letter-coloring(#00838F, #00BCD4, #00ACC1);
+}
+.selected-card-g {
+  background: #00BCD4;
+}
+.card-h {
+    @include letter-coloring(#c62828, #f44336, #e53935);
+}
+.selected-card-h {
+  background: #f44336;
+}
+.card-i {
+    @include letter-coloring(#00695C, #009688, #00897B);
+}
+.selected-card-i {
+  background: #009688;
+}
+.card-j {
+    @include letter-coloring(#2E7D32, #4CAF50, #43A047);
+}
+.selected-card-j {
+  background: #4CAF50;
+}
+.card-k {
+    @include letter-coloring(#558B2F, #8BC34A, #7CB342);
+}
+.selected-card-k {
+  background: #8BC34A;
+}
+.card-l {
+    @include letter-coloring(#9E9D24, #CDDC39, #C0CA33);
+}
+.selected-card-l {
+  background: #CDDC39;
+}
+.card-m {
+    @include letter-coloring(#AD1457, #E91E63, #D81B60);
+}
+.selected-card-m {
+  background: #E91E63;
+}
+.card-n {
+    @include letter-coloring(#FF8F00, #FFC107, #FFB300);
+}
+.selected-card-n {
+  background: #FFC107;
+}
+.card-o {
+    @include letter-coloring(#EF6C00, #FF9800, #FB8C00);
+}
+.selected-card-o {
+  background: #FF9800;
+}
+.card-p {
+    @include letter-coloring(#D84315, #FF5722, #F4511E);
+}
+.selected-card-p {
+  background: #FF5722;
+}
+.card-q {
+    @include letter-coloring(#4E342E, #795548, #6D4C41);
+}
+.selected-card-q {
+  background: #795548;
+}
+.card-r {
+    @include letter-coloring(#424242, #9E9E9E, #757575);
+}
+.selected-card-r {
+  background: #9E9E9E;
+}
+.card-s {
+    @include letter-coloring(#37474F, #607D8B, #546E7A);
+}
+.selected-card-s {
+  background: #607D8B;
+}
+.card-t {
+    @include letter-coloring(#AA00FF, #EA80FC, #E040FB);
+}
+.selected-card-t {
+  background: #EA80FC;
+}
+.card-u {
+    @include letter-coloring(#d50000, #ff8a80, #ff5252);
+}
+.selected-card-u {
+  background: #ff8a80;
+}
+.card-v {
+    @include letter-coloring(#00C853, #B9F6CA, #64FFDA);
+}
+.selected-card-v {
+  background: #B9F6CA;
+}
+.card-w {
+    @include letter-coloring(#2962FF, #82B1FF, #448AFF);
+}
+.selected-card-w {
+  background: #82B1FF;
+}
+.card-x {
+    @include letter-coloring(#bc170d, #f2483d, #ec1d10);
+}
+.selected-card-x {
+  background: #f2483d;
+}
+.card-y {
+    @include letter-coloring(#00BFA5, #A7FFEB, #64FFDA);
+}
+.selected-card-y {
+  background: #A7FFEB;
+}
+.card-z {
+    @include letter-coloring(#283593, #3F51B5, #3949AB);
+}
+.selected-card-z {
+  background: #3F51B5;
+}
+
+.font-a {
+    font-family: Oswald, serif;
+}
+.font-b {
+    font-family: Arvo, serif;
+}
+.font-c {
+    font-family: Montserrat, serif;
+}
+.font-d {
+    font-family: Lobster, serif;
+}
+.font-e {
+    font-family: Pacifico, serif;
+}
+.font-f {
+    font-family: Bangers, serif;
+}
+.font-g {
+    font-family: "Bree Serif", serif;
+}
+.font-h {
+    font-family: "Crafty Girls", serif;
+}
+.font-i {
+    font-family: "Abril Fatface", serif;
+}
+.font-j {
+    font-family: "Fontdiner Swanky", serif;
+}
+.font-k {
+    font-family: "Fugaz One", serif;
+}
+.font-l {
+    font-family: "Poiret One", serif;
+}
+.font-m {
+    font-family: "Fredericka the Great", serif;
+}
+.font-n {
+    font-family: Oswald, serif;
+}
+.font-o {
+    font-family: Arvo, serif;
+}
+.font-p {
+    font-family: Montserrat, serif;
+}
+.font-q {
+    font-family: Lobster, serif;
+}
+.font-r {
+    font-family: Pacifico, serif;
+}
+.font-s {
+    font-family: Bangers, serif;
+}
+.font-t {
+    font-family: "Bree Serif", serif;
+}
+.font-u {
+    font-family: "Crafty Girls", serif;
+}
+.font-v {
+    font-family: "Abril Fatface", serif;
+}
+.font-w {
+    font-family: "Fontdiner Swanky", serif;
+}
+.font-x {
+    font-family: "Fugaz One", serif;
+}
+.font-y {
+    font-family: "Poiret One", serif;
+}
+.font-z {
+    font-family: "Fredericka the Great", serif;
+}
+
+p {
+  color: #f23d86;
+  font-size: 25px;
+  font-family: "Fugaz One", serif;
+}
+
+.message{
+  background:#fff;
+  display:inline-block;
+  padding:13px;
+  border-radius:2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.04);
+  position:relative;
+}
+.message:before{
+  content:"";
+  position:absolute;
+  display:block;
+  left:0;
+  border-right:6px solid #fff;
+  border-top: 6px solid transparent;
+  border-bottom:6px solid transparent;
+  top:10px;
+  margin-left:-6px;
+}

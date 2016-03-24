@@ -1,0 +1,34 @@
+<ion-content padding class="comparison-table">
+  <div class="cat-container">
+    <cat-assistant></cat-assistant>
+
+    <div class="message-box" style="float: left; ">
+      <div class="message">
+        <a href="#" class="comp-message selected-{{card.prop.class}} {{card.prop.font}}">
+          {{card.value}}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cont">
+    <ul class="abc">
+      <li *ngFor="#card of deck.cards" [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
+          class="abc-letter {{card.prop.class}} {{card.prop.font}}">
+        <a (click)="guessCard(card)" *ngIf="card.guessed === false">
+          <div class="abc-letter-face"><span class="abc-letter-char"></span><span class="abc-letter-backing"></span>
+          </div>
+          {{card.value}}
+        </a>
+            <span *ngIf="card.guessed === true" class="abc-letter-char">
+                {{card.value}}
+            </span>
+      </li>
+    </ul>
+  </div>
+
+</ion-content>
+
+<button small fab fab-bottom fab-left nav-pop class="on-top back-fab" secondary>
+  <ion-icon name="arrow-round-back"></ion-icon>
+</button>
