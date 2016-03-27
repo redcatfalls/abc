@@ -15,16 +15,14 @@
     <ul class="abc">
       <li *ngFor="#card of deck.cards" [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
           class="abc-letter {{card.prop.class}} {{card.prop.font}}">
-        <a (click)="guessCard(card)" *ngIf="card.guessed === false">
+        <a (click)="guessCard(card)" *ngIf="card.guessed === false" btn-sound="tap.mp3">
           <div class="abc-letter-face">
             <span class="abc-letter-char"></span>
             <span class="abc-letter-backing"></span>
           </div>
           <div>{{card.value}}</div>
         </a>
-        <span *ngIf="card.guessed === true" class="abc-letter-char">
-            {{card.value}}
-        </span>
+        <span *ngIf="card.guessed === true" class="abc-letter-char">{{card.value}}</span>
       </li>
     </ul>
   </div>
