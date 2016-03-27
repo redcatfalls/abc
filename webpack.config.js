@@ -38,7 +38,7 @@ module.exports = {
         //loader: 'ts',
         loader: 'awesome-typescript',
         query: {
-          doTypeCheck: true,
+          doTypeCheck: false,
           resolveGlobs: false,
           externals: ['typings/tsd.d.ts']
         },

@@ -1,0 +1,39 @@
+.cat-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 700px;
+  border: solid #616161 0.5em;
+  perspective: 1000px;
+  border-radius: 15px;
+  background: #f23db0;
+  padding: 15px 50px 70px;
+
+  .cat-name {
+    color: white;
+    font-size: 25px;
+    font-family: "Fugaz One", serif;
+  }
+
+  .photo {
+    display: block;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 100%;
+    animation: pulse 2s linear infinite normal;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    50% {
+      transform: scale(1.1) rotate(-5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+}
