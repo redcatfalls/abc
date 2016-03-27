@@ -24,6 +24,7 @@
     <splash src="resources\android\splash\drawable-land-xhdpi-screen.png" density="land-xhdpi"/>
     <splash src="resources\android\splash\drawable-land-xxhdpi-screen.png" density="land-xxhdpi"/>
     <splash src="resources\android\splash\drawable-land-xxxhdpi-screen.png" density="land-xxxhdpi"/>
+    <preference name="AndroidPersistentFileLocation" value="Compatibility"/>
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*"/>

@@ -13,20 +13,15 @@ import {CatAssistant} from "../../components/cat-assistant/cat-assistant.compone
 export class CardsTable {
   deck: AbcCardDeck;
   selectedCard: AbcCard;
-  cardDeckService: CardDeckService;
 
-  private nav: NavController;
-
-  constructor(nav: NavController, cardDeckService: CardDeckService) {
-    this.nav = nav;
-    this.cardDeckService = cardDeckService;
+  constructor(private nav: NavController, private cardDeckService: CardDeckService) {
     this.deck = cardDeckService.initialDeck;
   }
 
   selectCard(card: AbcCard) {
     this.resetSelected();
     this.makeCardSelected(card);
-    this.goToSliderPage();
+    this.goToNextPage();
   }
 
   newGame() {
@@ -76,7 +71,7 @@ export class CardsTable {
     }
   }
 
-  private goToSliderPage() {
+  private goToNextPage() {
     this.nav.push(ComparisonTable, {
       card: this.selectedCard
     });

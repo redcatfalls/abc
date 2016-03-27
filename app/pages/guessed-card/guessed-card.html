@@ -1,0 +1,18 @@
+<ion-content padding class="getting-started">
+  <div class="cat-container">
+    <cat-assistant (click)="guessNewCard()"></cat-assistant>
+
+    <div class="message-box" style="float: left; ">
+      <div class="message">
+        <p>Miau... You Are Correct!</p>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both"></div>
+
+  <section class="cat-block">
+    <p class="cat-name">{{card.value}} - {{cat.name}}</p>
+    <img class="photo" [src]="image" alt="Cat Photo">
+  </section>
+
+</ion-content>

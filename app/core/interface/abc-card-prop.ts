@@ -1,5 +1,7 @@
+import {CatBrief} from "../classes/cat/cat-brief";
+
 export interface AbcCardProp {
     font : string,
     class: string,
-    image: string
+    cats: Array<CatBrief>
 }

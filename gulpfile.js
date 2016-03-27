@@ -12,18 +12,28 @@ var buildSass = require('ionic-gulp-sass-build');
 var copyHTML = require('ionic-gulp-html-copy');
 var copyFonts = require('ionic-gulp-fonts-copy');
 
-gulp.task('watch', ['sass', 'html', 'fonts'], function(){
+gulp.task('watch', ['sass', 'html', 'fonts', 'sounds'], function(){
   gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
   gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
   return buildWebpack({ watch: true });
 });
-gulp.task('build', ['sass', 'html', 'fonts'], buildWebpack);
+gulp.task('build', ['sass', 'html', 'fonts', 'sounds'], buildWebpack);
 gulp.task('sass', buildSass);
 gulp.task('html', copyHTML);
 gulp.task('fonts', copyFonts);
+gulp.task('sounds', copySounds);
 gulp.task('clean', function(done){
   del('www/build', done);
 });
+
+function copySounds(options) {
+  options.src = options.src || 'app/theme/sounds/*';
+  options.dest = options.dest || 'www/build/sounds';
+
+  return gulp.src(options.src)
+    .pipe(gulp.dest(options.dest));
+}
+
 
 /**
  * Ionic hooks

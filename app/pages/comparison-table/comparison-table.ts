@@ -3,6 +3,7 @@ import {CardDeckService} from "../../core/services/card-deck-service";
 import {AbcCardDeck} from "../../core/classes/abc-card-deck";
 import {AbcCard} from "../../core/classes/abc-card";
 import {CatAssistant} from "../../components/cat-assistant/cat-assistant.component";
+import {GuessedCard} from "../guessed-card/guessed-card";
 
 @Page({
   template: require('./comparison-table.html'),
@@ -34,10 +35,9 @@ export class ComparisonTable {
     if (this.card.isEqual(card)) {
       card.guessed = true;
       this.card.hidden = true;
-
-      setTimeout(() => {
-        this.nav.pop();
-      }, 500);
+      this.nav.push(GuessedCard, {
+        card: card
+      });
     } else {
       card.mistakenly = true;
     }

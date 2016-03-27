@@ -1,134 +1,304 @@
 import {AbcCard} from "./abc-card";
+import {CatBrief} from "./cat/cat-brief";
 
 export default [
   new AbcCard('A', {
     font  : 'font-a',
     class : 'card-a',
-    image : require('../../theme/images/abyssinian.jpg')
+    cats: [
+      new CatBrief('Abyssinian', [
+        require('../../theme/images/abyssinian.jpg')
+      ]),
+      new CatBrief('American Curl', [
+        require('../../theme/images/american-curl.jpg')
+      ]),
+      new CatBrief('American Shorthair', [
+        require('../../theme/images/american-shorthair.jpg')
+      ])
+    ]
   }),
   new AbcCard('B', {
     font  : 'font-b',
     class : 'card-b',
-    image : require('../../theme/images/balinese.jpg')
+    cats: [
+      new CatBrief('Balinese', [
+        require('../../theme/images/balinese.jpg')
+      ]),
+      new CatBrief('Bengal', [
+        require('../../theme/images/bengal-cats.jpg')
+      ]),
+      new CatBrief('Birman', [
+        require('../../theme/images/birman-cat.jpg'),
+        require('../../theme/images/birman-cat-2.jpg')
+      ]),
+      new CatBrief('British Shorthair', [
+        require('../../theme/images/british-shorthair.jpg'),
+        require('../../theme/images/british-shorthair-2.jpg')
+      ])
+    ]  
   }),
   new AbcCard('C', {
     font  : 'font-c',
     class : 'card-c',
-    image : require('../../theme/images/chartreux.jpg')
+    cats: [
+      new CatBrief('Chartreus', [
+        require('../../theme/images/chartreux.jpg')
+      ]),
+      new CatBrief('Chinese-li-hua', [
+        require('../../theme/images/chinese-li-hua.jpg')
+      ]),
+      new CatBrief('Cymric', [
+        require('../../theme/images/cymric.jpg')
+      ])
+    ]
   }),
   new AbcCard('D', {
     font  : 'font-d',
     class : 'card-d',
-    image : require('../../theme/images/devon-rex.jpg')
+    cats: [
+      new CatBrief('Devon Rex', [
+        require('../../theme/images/devon-rex.jpg'),
+        require('../../theme/images/devon-rex-2.jpg'),
+        require('../../theme/images/devon-rex-3.jpg')
+      ])
+    ]
   }),
   new AbcCard('E', {
     font  : 'font-e',
     class : 'card-e',
-    image : require('../../theme/images/exotic.jpg')
+    cats: [
+      new CatBrief('Egyptian Mau', [
+        require('../../theme/images/egyptian-mau.jpg')
+      ]),
+      new CatBrief('European Burmese', [
+        require('../../theme/images/european-burmese.jpg'),
+        require('../../theme/images/european-burmese-2.jpg')
+      ]),
+      new CatBrief('Exotic', [
+        require('../../theme/images/exotic.jpg'),
+        require('../../theme/images/exotic-2.jpg'),
+      ])
+    ]
   }),
   new AbcCard('F', {
     font  : 'font-f',
     class : 'card-f',
-    image : require('../../theme/images/foldex-cat.jpg')
+    cats: [
+      new CatBrief('Foldex', [
+        require('../../theme/images/foldex-cat.jpg')
+      ]),
+      new CatBrief('France', [
+        require('../../theme/images/france-cat.jpg')
+      ])
+    ]
   }),
   new AbcCard('G', {
     font  : 'font-g',
     class : 'card-g',
-    image : require('../../theme/images/german-rex-cat.jpg')
+    cats: [
+      new CatBrief('German Rex', [
+        require('../../theme/images/german-rex-cat.jpg')
+      ])
+    ]
   }),
   new AbcCard('H', {
     font  : 'font-h',
     class : 'card-h',
-    image : require('../../theme/images/havana-brown.jpg')
+    cats: [
+      new CatBrief('Havana Brown', [
+        require('../../theme/images/havana-brown.jpg')
+      ]),
+      new CatBrief('Himalayan', [
+        require('../../theme/images/himalayan.jpg')
+      ])
+    ]
   }),
   new AbcCard('I', {
     font  : 'font-i',
     class : 'card-i',
-    image : require('../../theme/images/internet-cat.jpg')
+    cats: [
+      new CatBrief('Internet', [
+        require('../../theme/images/internet-cat.jpg')
+      ])
+    ]
   }),
   new AbcCard('J', {
     font  : 'font-j',
     class : 'card-j',
-    image : require('../../theme/images/japanese-bobtail.jpg')
+    cats: [
+      new CatBrief('Japanese Bobtail', [
+        require('../../theme/images/japanese-bobtail.jpg')
+      ]),
+      new CatBrief('Javanese', [
+        require('../../theme/images/javanese.jpg')
+      ])
+    ]
   }),
   new AbcCard('K', {
     font  : 'font-k',
     class : 'card-k',
-    image : require('../../theme/images/khao-manee.jpg')
+    cats: [
+      new CatBrief('Khao Manee', [
+        require('../../theme/images/khao-manee.jpg')
+      ]),
+      new CatBrief('Kuril Islands Bobtail', [
+        require('../../theme/images/kuril-islands-bobtail.jpg')
+      ])
+    ]
   }),
   new AbcCard('L', {
     font  : 'font-l',
     class : 'card-l',
-    image : require('../../theme/images/la-perm.jpg')
+    cats: [
+      new CatBrief('La Perm', [
+        require('../../theme/images/la-perm.jpg')
+      ])
+    ]
   }),
   new AbcCard('M', {
     font  : 'font-m',
     class : 'card-m',
-    image : require('../../theme/images/maine-coon.jpg')
+    cats: [
+      new CatBrief('Maine Coon', [
+        require('../../theme/images/maine-coon.jpg')
+      ]),
+      new CatBrief('Manx', [
+        require('../../theme/images/manx.jpg')
+      ])
+    ] 
   }),
   new AbcCard('N', {
     font  : 'font-n',
     class : 'card-n',
-    image : require('../../theme/images/nebelung-cat.jpg')
+    cats: [
+      new CatBrief('Nebelung', [
+        require('../../theme/images/nebelung-cat.jpg')
+      ]),
+      new CatBrief('Norwegian Forest', [
+        require('../../theme/images/norwegian-forest-cat.jpg')
+      ])
+    ]
   }),
   new AbcCard('O', {
     font  : 'font-o',
     class : 'card-o',
-    image : require('../../theme/images/oriental-shorthair.jpg')
+    cats: [
+      new CatBrief('Oriental Shorthair', [
+        require('../../theme/images/oriental-shorthair.jpg'),
+        require('../../theme/images/oriental-shorthair-2.jpg')
+      ])
+    ]
   }),
   new AbcCard('P', {
     font  : 'font-p',
     class : 'card-p',
-    image : require('../../theme/images/persian.jpg')
+    cats: [
+      new CatBrief('Persian', [
+        require('../../theme/images/persian.jpg')
+      ])
+    ]
   }),
   new AbcCard('Q', {
     font  : 'font-q',
     class : 'card-q',
-    image : require('../../theme/images/questcat.jpg')
+    cats: [
+      new CatBrief('Quest', [
+        require('../../theme/images/questcat.jpg')
+      ])
+    ]
   }),
   new AbcCard('R', {
     font  : 'font-r',
     class : 'card-r',
-    image : require('../../theme/images/ragamuffin.jpg')
+    cats: [
+      new CatBrief('Ragamuffin', [
+        require('../../theme/images/ragamuffin.jpg')
+      ]),
+      new CatBrief('Ragdoll', [
+        require('../../theme/images/ragdoll.jpg')
+      ])
+    ]
   }),
   new AbcCard('S', {
     font  : 'font-s',
     class : 'card-s',
-    image : require('../../theme/images/siamese.jpg')
+    cats: [
+      new CatBrief('Siamese', [
+        require('../../theme/images/siamese.jpg')
+      ]),
+      new CatBrief('Singapura', [
+        require('../../theme/images/singapura.jpg')
+      ]),
+      new CatBrief('Sphynx', [
+        require('../../theme/images/sphynx.jpg')
+      ])
+    ]
   }),
   new AbcCard('T', {
     font  : 'font-t',
     class : 'card-t',
-    image : require('../../theme/images/thai.jpg')
+    cats: [
+      new CatBrief('Thai', [
+        require('../../theme/images/thai.jpg'),
+        require('../../theme/images/thai-2.jpg')
+      ]),
+      new CatBrief('Tonkinese', [
+        require('../../theme/images/tonkinese.jpg')
+      ])
+    ]
   }),
   new AbcCard('U', {
     font  : 'font-u',
     class : 'card-u',
-    image : require('../../theme/images/ukrainian-levkoy.jpg')
+    cats: [
+      new CatBrief('Ukrainian Levkoy', [
+        require('../../theme/images/ukrainian-levkoy.jpg')
+      ])
+    ]
   }),
   new AbcCard('V', {
     font  : 'font-v',
     class : 'card-v',
-    image : require('../../theme/images/vendettacat.jpg')
+    cats: [
+      new CatBrief('Vendetta', [
+        require('../../theme/images/vendettacat.jpg')
+      ])
+    ]
   }),
   new AbcCard('W', {
     font  : 'font-w',
     class : 'card-w',
-    image : require('../../theme/images/wildcat-animal-nature-cat-natural-animals-ears.jpg')
+    cats: [
+      new CatBrief('Wild', [
+        require('../../theme/images/wildcat-animal-nature-cat-natural-animals-ears.jpg')
+      ])
+    ]
   }),
   new AbcCard('X', {
     font  : 'font-x',
     class : 'card-x',
-    image : require('../../theme/images/xman.jpg')
+    cats: [
+      new CatBrief('Xman', [
+        require('../../theme/images/xman.jpg')
+      ])
+    ]
   }),
   new AbcCard('Y', {
     font  : 'font-y',
     class : 'card-y',
-    image : require('../../theme/images/yellowcat.jpg')
+    cats: [
+      new CatBrief('Yellow', [
+        require('../../theme/images/yellowcat.jpg')
+      ])
+    ]
   }),
   new AbcCard('Z', {
     font  : 'font-z',
     class : 'card-z',
-    image : require('../../theme/images/zzzsleepcat.jpg')
+    cats: [
+      new CatBrief('Zzz Sleep', [
+        require('../../theme/images/zzzsleepcat.jpg')
+      ])
+    ]
   }),
 ]
