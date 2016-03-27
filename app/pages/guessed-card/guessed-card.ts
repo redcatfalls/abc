@@ -1,8 +1,8 @@
 import {Page, NavParams, NavController} from "ionic-angular/index";
-import {CatAssistant} from "../../components/cat-assistant/cat-assistant.component";
 import {getRandomVal} from "../../core/utils/utils";
 import {AbcCard} from "../../core/classes/abc-card";
 import {CatBrief} from "../../core/classes/cat/cat-brief";
+import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.component";
 
 @Page({
   template: require('./guessed-card.html'),

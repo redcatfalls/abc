@@ -4,11 +4,12 @@ import {ComparisonTable} from "../comparison-table/comparison-table";
 import {AbcCardDeck} from "../../core/classes/abc-card-deck";
 import {AbcCard} from "../../core/classes/abc-card";
 import {CardGuessable} from "../../core/classes/card-guessable";
-import {CatAssistant} from "../../components/cat-assistant/cat-assistant.component";
+import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.component";
+import {BtnSound} from "../../directives/btn-sound";
 
 @Page({
   template: require('./cards-table.html'),
-  directives: [CatAssistant]
+  directives: [CatAssistant, BtnSound]
 })
 export class CardsTable {
   deck: AbcCardDeck;
