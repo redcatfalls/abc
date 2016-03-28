@@ -1,12 +1,32 @@
-export class Audio {
-  public media: Media;
+import {MediaPolyfill} from "../cordova-polyfills/media-polyfill";
+
+export class MediaService {
+  private audio: Media;
 
   constructor(src: string) {
-    this.media = new Media(cordova.file.applicationDirectory + 'www/build/sounds/' + src, () => {});
+    this.audio = MediaService.getMediaObject(src);
   }
 
-  play() {
-    this.media.play();
+  /**
+   *
+   * @returns {Media}
+   */
+  sound(): Media {
+    return this.audio;
+  }
+
+  /**
+   *
+   * @param src
+   * @returns {any}
+   */
+  static getMediaObject(src): any {
+    if (window['Media']) {
+      return new Media(cordova.file.applicationDirectory + 'www/build/sounds/' + src, () => {});
+    }
+
+    // fallback to browser implementation
+    return new MediaPolyfill('/build/sounds/' + src);
   }
 
 }
