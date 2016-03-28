@@ -1,5 +1,5 @@
 import {Directive} from "angular2/core";
-import {Audio} from "../core/services/audio.service";
+import {MediaService} from "../core/services/audio.service";
 
 @Directive({
   selector: '[btn-sound]',
@@ -11,15 +11,15 @@ import {Audio} from "../core/services/audio.service";
   }
 })
 export class BtnSound {
-  private audio: Audio;
+  private media: MediaService;
   private src: string;
 
-  ngOnInit() {
-    this.audio = new Audio(this.src);
+  ngOnInit(): void {
+    this.media = new MediaService(this.src);
   }
 
-  playSound() {
-    this.audio.play();
+  playSound(): void {
+    this.media.sound().play();
   }
 
 }

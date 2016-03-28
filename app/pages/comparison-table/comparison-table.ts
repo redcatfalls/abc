@@ -4,7 +4,7 @@ import {AbcCardDeck} from "../../core/classes/abc-card-deck";
 import {AbcCard} from "../../core/classes/abc-card";
 import {GuessedCard} from "../guessed-card/guessed-card";
 import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.component";
-import {Audio} from "../../core/services/audio.service";
+import {MediaService} from "../../core/services/audio.service";
 
 @Page({
   template: require('./comparison-table.html'),
@@ -13,14 +13,12 @@ import {Audio} from "../../core/services/audio.service";
 export class ComparisonTable {
   deck: AbcCardDeck;
   card: AbcCard;
-  nav: NavController;
   sliderOptions: any;
-  audioOk: Audio;
-  audioFail: Audio;
+  mediaOk: MediaService;
+  mediaFail: MediaService;
 
-  constructor(params: NavParams, cardDeckService: CardDeckService, nav: NavController) {
+  constructor(params: NavParams, cardDeckService: CardDeckService, private nav: NavController) {
     this.card = params.get('card');
-    this.nav = nav;
     this.nav.swipeBackEnabled = true;
     this.deck = cardDeckService.guessedDeck;
     this.sliderOptions = {
@@ -28,19 +26,19 @@ export class ComparisonTable {
       centeredSlides: true,
       spaceBetween: 50
     };
-    this.audioOk = new Audio('guess.mp3');
-    this.audioFail = new Audio('wrong.mp3');
+    this.mediaOk = new MediaService('guess.mp3');
+    this.mediaFail = new MediaService('wrong.mp3');
   }
 
-  guessCard(card: AbcCard) {
+  guessCard(card: AbcCard): void {
     if (card.guessed) {
-      this.audioFail.play();
+      this.mediaFail.sound().play();
       
-      return false;
+      return;
     }
 
     if (this.card.isEqual(card)) {
-      this.audioOk.play();
+      this.mediaOk.sound().play();
       
       card.guessed = true;
       this.card.hidden = true;
@@ -48,7 +46,7 @@ export class ComparisonTable {
         card: card
       });
     } else {
-      this.audioFail.play();
+      this.mediaFail.sound().play();
 
       card.mistakenly = true;
     }
