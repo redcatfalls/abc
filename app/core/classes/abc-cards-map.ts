@@ -1,7 +1,7 @@
 import {AbcCard} from "./abc-card";
 import {CatBrief} from "./cat/cat-brief";
 
-export default [
+export default () => [
   new AbcCard('A', {
     font  : 'font-a',
     class : 'card-a',
@@ -35,7 +35,7 @@ export default [
         require('../../theme/images/british-shorthair.jpg'),
         require('../../theme/images/british-shorthair-2.jpg')
       ])
-    ]  
+    ]
   }),
   new AbcCard('C', {
     font  : 'font-c',
@@ -165,7 +165,7 @@ export default [
       new CatBrief('Manx', [
         require('../../theme/images/manx.jpg')
       ])
-    ] 
+    ]
   }),
   new AbcCard('N', {
     font  : 'font-n',
@@ -301,4 +301,4 @@ export default [
       ])
     ]
   }),
-]
+];

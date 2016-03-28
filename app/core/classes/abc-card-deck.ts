@@ -6,7 +6,7 @@ export class AbcCardDeck {
   public cards: Array<AbcCard> = [];
 
   constructor() {
-    this.cards = abcCardMap.slice(0, abcCardMap.length);
+    this.cards = abcCardMap();
   }
 
   shuffle() {
