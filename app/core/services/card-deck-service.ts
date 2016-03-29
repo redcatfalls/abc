@@ -20,7 +20,7 @@ export class CardDeckService {
     });
   }
   
-  isFinished() {
+  isAllCardsGuessed() {
     return this.guessedDeck.cards.filter((card: AbcCard) => card.guessed).length >= this.guessedDeck.cards.length;
   }
 

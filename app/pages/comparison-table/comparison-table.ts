@@ -5,6 +5,8 @@ import {AbcCard} from "../../core/classes/abc-card";
 import {GuessedCard} from "../guessed-card/guessed-card";
 import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.component";
 import {MediaService} from "../../core/services/audio.service";
+import {GameWin} from "../game-win/game-win";
+import {GameProgressService} from "../../core/services/game-progress-service";
 
 @Page({
   template: require('./comparison-table.html'),
@@ -13,19 +15,13 @@ import {MediaService} from "../../core/services/audio.service";
 export class ComparisonTable {
   deck: AbcCardDeck;
   card: AbcCard;
-  sliderOptions: any;
   mediaOk: MediaService;
   mediaFail: MediaService;
 
-  constructor(params: NavParams, cardDeckService: CardDeckService, private nav: NavController) {
+  constructor(params: NavParams, private cardDeckService: CardDeckService, private nav: NavController, private gp: GameProgressService) {
     this.card = params.get('card');
     this.nav.swipeBackEnabled = true;
     this.deck = cardDeckService.guessedDeck;
-    this.sliderOptions = {
-      slidesPerView: 3,
-      centeredSlides: true,
-      spaceBetween: 50
-    };
     this.mediaOk = new MediaService('guess.mp3');
     this.mediaFail = new MediaService('wrong.mp3');
   }
@@ -45,6 +41,11 @@ export class ComparisonTable {
       this.nav.push(GuessedCard, {
         card: card
       });
+
+      if (this.cardDeckService.isAllCardsGuessed()) {
+        this.gp.finishGame();
+        this.nav.push(GameWin);
+      }
     } else {
       this.mediaFail.sound().play();
 
