@@ -6,6 +6,7 @@ import {AbcCard} from "../../core/classes/abc-card";
 import {CardGuessable} from "../../core/classes/card-guessable";
 import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.component";
 import {BtnSound} from "../../directives/btn-sound";
+import {GameProgressService} from "../../core/services/game-progress-service";
 
 @Page({
   template: require('./cards-table.html'),
@@ -15,7 +16,7 @@ export class CardsTable {
   deck: AbcCardDeck;
   selectedCard: AbcCard;
 
-  constructor(private nav: NavController, private cardDeckService: CardDeckService) {
+  constructor(private nav: NavController, private cardDeckService: CardDeckService, private gp: GameProgressService) {
     this.deck = cardDeckService.initialDeck;
   }
 
@@ -32,6 +33,7 @@ export class CardsTable {
       buttons: [{
         text: 'Yes',
         handler: () => {
+          this.gp.newGame();
           this.resetTable();
         }
       }, {
@@ -50,26 +52,12 @@ export class CardsTable {
   }
 
   onPageWillEnter() {
-    this.cardDeckService.resetMistakenly();
-  }
-
-  onPageDidEnter() {
-    if (this.cardDeckService.isFinished()) {
-      let alert = Alert.create({
-        title: 'Congratulations!',
-        subTitle: 'You successfully have finished a game!',
-        buttons: [{
-          text: 'Start a new game',
-          handler: () => {
-            this.resetTable();
-          }
-        }]
-      });
-
-      setTimeout(() => {
-        this.nav.present(alert);
-      }, 100);
+    if (this.gp.isFinished()) {
+      this.gp.newGame();
+      return this.resetTable();
     }
+    
+    this.cardDeckService.resetMistakenly();
   }
 
   private goToNextPage() {

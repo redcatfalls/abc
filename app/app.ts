@@ -3,6 +3,7 @@
 import {App, IonicApp, Platform, Alert} from 'ionic-angular';
 import {CardsTable} from './pages/cards-table/cards-table';
 import {CardDeckService} from "./core/services/card-deck-service";
+import {GameProgressService} from "./core/services/game-progress-service";
 // import {enableProdMode} from "angular2/core";
 
 require('animate.css/source/_base.css');
@@ -20,7 +21,7 @@ declare var navigator: {
 
 @App({
   templateUrl: 'build/app.html',
-  providers: [CardDeckService],
+  providers: [CardDeckService, GameProgressService],
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 class AbcGameApp {
