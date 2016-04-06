@@ -6,7 +6,10 @@ import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.comp
   directives: [CatAssistant]
 })
 export class GameWin {
-  constructor(private nav: NavController) {}
+  constructor(private nav: NavController) {
+    var letterSound = new MediaService('abc.m4a'); 
+    letterSound.sound().play();
+  }
 
   startNewGame() {
     this.nav.popToRoot();
