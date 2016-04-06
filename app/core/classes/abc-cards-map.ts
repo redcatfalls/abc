@@ -15,7 +15,8 @@ export default () => [
       new CatBrief('American Shorthair', [
         require('../../theme/images/american-shorthair.jpg')
       ])
-    ]
+    ],
+    sound : 'a.mp3'
   }),
   new AbcCard('B', {
     font  : 'font-b',
@@ -35,7 +36,8 @@ export default () => [
         require('../../theme/images/british-shorthair.jpg'),
         require('../../theme/images/british-shorthair-2.jpg')
       ])
-    ]
+    ],
+    sound : 'b.mp3'
   }),
   new AbcCard('C', {
     font  : 'font-c',
@@ -50,7 +52,8 @@ export default () => [
       new CatBrief('Cymric', [
         require('../../theme/images/cymric.jpg')
       ])
-    ]
+    ],
+    sound : 'c.mp3'
   }),
   new AbcCard('D', {
     font  : 'font-d',
@@ -61,7 +64,8 @@ export default () => [
         require('../../theme/images/devon-rex-2.jpg'),
         require('../../theme/images/devon-rex-3.jpg')
       ])
-    ]
+    ],
+    sound : 'd.m4a'
   }),
   new AbcCard('E', {
     font  : 'font-e',
@@ -78,7 +82,8 @@ export default () => [
         require('../../theme/images/exotic.jpg'),
         require('../../theme/images/exotic-2.jpg'),
       ])
-    ]
+    ],
+    sound : 'e.m4a'
   }),
   new AbcCard('F', {
     font  : 'font-f',
@@ -90,7 +95,8 @@ export default () => [
       new CatBrief('France', [
         require('../../theme/images/france-cat.jpg')
       ])
-    ]
+    ],
+    sound : 'f.m4a'
   }),
   new AbcCard('G', {
     font  : 'font-g',
@@ -99,7 +105,8 @@ export default () => [
       new CatBrief('German Rex', [
         require('../../theme/images/german-rex-cat.jpg')
       ])
-    ]
+    ],
+    sound : 'g.m4a'
   }),
   new AbcCard('H', {
     font  : 'font-h',
@@ -111,7 +118,8 @@ export default () => [
       new CatBrief('Himalayan', [
         require('../../theme/images/himalayan.jpg')
       ])
-    ]
+    ],
+    sound : 'h.m4a'
   }),
   new AbcCard('I', {
     font  : 'font-i',
@@ -120,7 +128,8 @@ export default () => [
       new CatBrief('Internet', [
         require('../../theme/images/internet-cat.jpg')
       ])
-    ]
+    ],
+    sound : 'i.m4a'
   }),
   new AbcCard('J', {
     font  : 'font-j',
@@ -132,7 +141,8 @@ export default () => [
       new CatBrief('Javanese', [
         require('../../theme/images/javanese.jpg')
       ])
-    ]
+    ],
+    sound : 'j.m4a'
   }),
   new AbcCard('K', {
     font  : 'font-k',
@@ -144,7 +154,8 @@ export default () => [
       new CatBrief('Kuril Islands Bobtail', [
         require('../../theme/images/kuril-islands-bobtail.jpg')
       ])
-    ]
+    ],
+    sound : 'k.mp3'
   }),
   new AbcCard('L', {
     font  : 'font-l',
@@ -153,7 +164,8 @@ export default () => [
       new CatBrief('La Perm', [
         require('../../theme/images/la-perm.jpg')
       ])
-    ]
+    ],
+    sound : 'l.mp3'
   }),
   new AbcCard('M', {
     font  : 'font-m',
@@ -165,7 +177,8 @@ export default () => [
       new CatBrief('Manx', [
         require('../../theme/images/manx.jpg')
       ])
-    ]
+    ],
+    sound : 'm.mp3'
   }),
   new AbcCard('N', {
     font  : 'font-n',
@@ -177,7 +190,8 @@ export default () => [
       new CatBrief('Norwegian Forest', [
         require('../../theme/images/norwegian-forest-cat.jpg')
       ])
-    ]
+    ],
+    sound : 'n.mp3'
   }),
   new AbcCard('O', {
     font  : 'font-o',
@@ -187,7 +201,8 @@ export default () => [
         require('../../theme/images/oriental-shorthair.jpg'),
         require('../../theme/images/oriental-shorthair-2.jpg')
       ])
-    ]
+    ],
+    sound : 'o.mp3'
   }),
   new AbcCard('P', {
     font  : 'font-p',
@@ -196,7 +211,8 @@ export default () => [
       new CatBrief('Persian', [
         require('../../theme/images/persian.jpg')
       ])
-    ]
+    ],
+    sound : 'p.mp3'
   }),
   new AbcCard('Q', {
     font  : 'font-q',
@@ -205,7 +221,8 @@ export default () => [
       new CatBrief('Quest', [
         require('../../theme/images/questcat.jpg')
       ])
-    ]
+    ],
+    sound : 'q.mp3'
   }),
   new AbcCard('R', {
     font  : 'font-r',
@@ -217,7 +234,8 @@ export default () => [
       new CatBrief('Ragdoll', [
         require('../../theme/images/ragdoll.jpg')
       ])
-    ]
+    ],
+    sound : 'r.mp3'
   }),
   new AbcCard('S', {
     font  : 'font-s',
@@ -232,7 +250,8 @@ export default () => [
       new CatBrief('Sphynx', [
         require('../../theme/images/sphynx.jpg')
       ])
-    ]
+    ],
+    sound : 's.mp3'
   }),
   new AbcCard('T', {
     font  : 'font-t',
@@ -245,7 +264,8 @@ export default () => [
       new CatBrief('Tonkinese', [
         require('../../theme/images/tonkinese.jpg')
       ])
-    ]
+    ],
+    sound : 't.mp3'
   }),
   new AbcCard('U', {
     font  : 'font-u',
@@ -254,7 +274,8 @@ export default () => [
       new CatBrief('Ukrainian Levkoy', [
         require('../../theme/images/ukrainian-levkoy.jpg')
       ])
-    ]
+    ],
+    sound : 'u.mp3'
   }),
   new AbcCard('V', {
     font  : 'font-v',
@@ -263,7 +284,8 @@ export default () => [
       new CatBrief('Vendetta', [
         require('../../theme/images/vendettacat.jpg')
       ])
-    ]
+    ],
+    sound : 'v.mp3'
   }),
   new AbcCard('W', {
     font  : 'font-w',
@@ -272,7 +294,8 @@ export default () => [
       new CatBrief('Wild', [
         require('../../theme/images/wildcat-animal-nature-cat-natural-animals-ears.jpg')
       ])
-    ]
+    ],
+    sound : 'w.mp3'
   }),
   new AbcCard('X', {
     font  : 'font-x',
@@ -281,7 +304,8 @@ export default () => [
       new CatBrief('Xman', [
         require('../../theme/images/xman.jpg')
       ])
-    ]
+    ],
+    sound : 'x.mp3'
   }),
   new AbcCard('Y', {
     font  : 'font-y',
@@ -290,7 +314,8 @@ export default () => [
       new CatBrief('Yellow', [
         require('../../theme/images/yellowcat.jpg')
       ])
-    ]
+    ],
+    sound : 'y.mp3'
   }),
   new AbcCard('Z', {
     font  : 'font-z',
@@ -299,6 +324,7 @@ export default () => [
       new CatBrief('Zzz Sleep', [
         require('../../theme/images/zzzsleepcat.jpg')
       ])
-    ]
+    ],
+    sound : 'z.mp3'
   }),
 ];
