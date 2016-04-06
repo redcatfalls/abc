@@ -1,5 +1,6 @@
 import {Page, NavController} from "ionic-angular/index";
 import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.component";
+import {MediaService} from "../../core/services/audio.service";
 
 @Page({
   template: require('./game-win.html'),
