@@ -15,7 +15,7 @@
     <ul class="abc">
       <li *ngFor="#card of deck.cards" [ngClass]="{'not-guessed': !card.guessed, mistaken: card.mistakenly}"
           class="abc-letter {{card.prop.class}} {{card.prop.font}}">
-        <a (click)="guessCard(card)" *ngIf="card.guessed === false" btn-sound="tap.mp3">
+        <a (click)="guessCard(card)" *ngIf="card.guessed === false" btn-sound="{{card.prop.sound}}">
           <div class="abc-letter-face">
             <span class="abc-letter-char"></span>
             <span class="abc-letter-backing"></span>
