@@ -8,7 +8,7 @@ module.exports = {
     vendors: [
       path.normalize('es6-shim/es6-shim.min'),
       'reflect-metadata',
-      path.normalize('zone.js/dist/zone-microtask')
+      path.normalize('zone.js/dist/zone')
     ],
     app: path.resolve('app/app')
   },
