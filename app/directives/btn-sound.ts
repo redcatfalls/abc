@@ -1,18 +1,18 @@
-import {Directive} from "angular2/core";
+import {Directive, HostListener, Input, OnInit} from "angular2/core";
 import {MediaService} from "../core/services/audio.service";
 
 @Directive({
-  selector: '[btn-sound]',
-  properties: [
-    'src: btn-sound'
-  ],
-  host: {
-    '(click)': 'playSound()'
-  }
+  selector: '[btn-sound]'
 })
-export class BtnSound {
+export class BtnSound implements OnInit {
   private media: MediaService;
-  private src: string;
+
+  @Input('btn-sound') src: string;
+
+  @HostListener('click')
+  onClick() {
+    this.playSound()
+  }
 
   ngOnInit(): void {
     this.media = new MediaService(this.src);

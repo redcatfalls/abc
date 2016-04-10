@@ -20,7 +20,6 @@ export class ComparisonTable {
 
   constructor(params: NavParams, private cardDeckService: CardDeckService, private nav: NavController, private gp: GameProgressService) {
     this.card = params.get('card');
-    this.nav.swipeBackEnabled = true;
     this.deck = cardDeckService.guessedDeck;
     this.mediaOk = new MediaService('guess.mp3');
     this.mediaFail = new MediaService('wrong.mp3');
