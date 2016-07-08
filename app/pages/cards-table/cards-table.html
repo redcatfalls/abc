@@ -14,7 +14,7 @@
     <li *ngFor="#card of deck.cards" [hidden]="card.hidden"
         class="abc-letter animated zoomInUp {{card.prop.class}} {{card.prop.font}}">
       <div class="abc-letter-face">
-        <a (click)="selectCard(card)" btn-sound="tap.mp3">
+        <a (click)="selectCard(card)" btn-sound="{{card.value}}.mp3">
           <span class="abc-letter-char">{{card.value}}</span>
           <span class="abc-letter-backing"></span>
         </a>

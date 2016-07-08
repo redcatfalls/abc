@@ -7,9 +7,11 @@ import {MediaService} from "../../core/services/audio.service";
   directives: [CatAssistant]
 })
 export class GameWin {
+  mediaWin: MediaService;
+
   constructor(private nav: NavController) {
-    var letterSound = new MediaService('abc.m4a'); 
-    letterSound.sound().play();
+    this.mediaWin = new MediaService('abc.m4a');
+    this.mediaWin.sound().play();
   }
 
   startNewGame() {
