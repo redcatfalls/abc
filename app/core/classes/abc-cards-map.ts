@@ -65,7 +65,7 @@ export default () => [
         require('../../theme/images/devon-rex-3.jpg')
       ])
     ],
-    sound : 'd.m4a'
+    sound : 'd.mp3'
   }),
   new AbcCard('E', {
     font  : 'font-e',
@@ -83,7 +83,7 @@ export default () => [
         require('../../theme/images/exotic-2.jpg'),
       ])
     ],
-    sound : 'e.m4a'
+    sound : 'e.mp3'
   }),
   new AbcCard('F', {
     font  : 'font-f',
@@ -96,7 +96,7 @@ export default () => [
         require('../../theme/images/france-cat.jpg')
       ])
     ],
-    sound : 'f.m4a'
+    sound : 'f.mp3'
   }),
   new AbcCard('G', {
     font  : 'font-g',
@@ -106,7 +106,7 @@ export default () => [
         require('../../theme/images/german-rex-cat.jpg')
       ])
     ],
-    sound : 'g.m4a'
+    sound : 'g.mp3'
   }),
   new AbcCard('H', {
     font  : 'font-h',
@@ -119,7 +119,7 @@ export default () => [
         require('../../theme/images/himalayan.jpg')
       ])
     ],
-    sound : 'h.m4a'
+    sound : 'h.mp3'
   }),
   new AbcCard('I', {
     font  : 'font-i',
@@ -129,7 +129,7 @@ export default () => [
         require('../../theme/images/internet-cat.jpg')
       ])
     ],
-    sound : 'i.m4a'
+    sound : 'i.mp3'
   }),
   new AbcCard('J', {
     font  : 'font-j',
@@ -142,7 +142,7 @@ export default () => [
         require('../../theme/images/javanese.jpg')
       ])
     ],
-    sound : 'j.m4a'
+    sound : 'j.mp3'
   }),
   new AbcCard('K', {
     font  : 'font-k',
