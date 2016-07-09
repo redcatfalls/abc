@@ -7,10 +7,11 @@ import {CatAssistant} from "../../components/ui/cat-assistant/cat-assistant.comp
 import {MediaService} from "../../core/services/audio.service";
 import {GameWin} from "../game-win/game-win";
 import {GameProgressService} from "../../core/services/game-progress-service";
+import {BtnSound} from "../../directives/btn-sound";
 
 @Page({
   template: require('./comparison-table.html'),
-  directives: [CatAssistant]
+  directives: [CatAssistant, BtnSound]
 })
 export class ComparisonTable {
   deck: AbcCardDeck;
